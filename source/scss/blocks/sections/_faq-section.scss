@@ -1,0 +1,99 @@
+.faq-section {
+  position: relative;
+  padding: clamp(150px, 13.8484vw, 190px) 0 clamp(150px, 14.5773vw, 200px);
+  z-index: 2;
+  overflow: hidden;
+
+  &__box {
+    display: grid;
+    position: relative;
+    grid-gap: 24px;
+
+    @include for-small-tablet{
+      grid-template-columns: 1fr clamp(350px, 38.9213vw, 534px);
+    }
+
+    @include small-tablet{
+      grid-template-columns: 100%;
+    }
+
+    .images-list{
+      @media (min-width: (1100px)) {
+        transform: translate(-27%, -50%);
+      }
+      @media (min-width: (1024px)) and (max-width: (1100px)) {
+        transform: translate(-37%, -50%);
+      }
+
+      @include tablet{
+        @media (min-width: (900px)){
+          transform: translate(-37%, -50%);
+        }
+      }
+      @media (min-width: (800px)) and (max-width: (900px)) {
+        transform: translate(-50%, -50%);
+      }
+      @media (min-width: (768px)) and (max-width: (800px)) {
+        transform: translate(-57%, -50%);
+      }
+
+      @include for-small-tablet{
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+
+      @include small-tablet{
+        margin-left: calc((var(--container-offset) + 30px) * -1);
+      }
+
+      &__row{
+        @include small-tablet{
+          &:not(.images-list__row--mode){
+            display: none;
+          }
+        }
+
+        &--mode{
+          @include small-tablet{
+            justify-content: flex-end;
+          }
+        }
+      }
+
+      &__icon{
+        @include small-tablet{
+          &:last-child{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__inner{
+    color: rgba(var(--cl-d),1.0);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(18px, 1.8222vw, 25px);
+    @include for-small-tablet{
+      grid-column: 2;
+      max-width: clamp(350px, 38.9213vw, 534px);
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 15px;
+
+    @include small-tablet{
+      @include for-mobile{
+        max-width: 80%;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 0 74px;
+  }
+}

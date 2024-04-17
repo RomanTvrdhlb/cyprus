@@ -1,0 +1,509 @@
+.steps-list {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &:nth-child(odd) {
+      .steps-card {
+        @include for-small-tablet {
+          &:nth-child(even) {
+            background: var(--gr-a);
+            * {
+              color: rgba(var(--cl-a), 1);
+            }
+          }
+        }
+
+        @include small-tablet {
+          @include for-mobile {
+            &:last-child {
+              background: var(--gr-a);
+              * {
+                color: rgba(var(--cl-a), 1);
+              }
+            }
+          }
+        }
+
+        @include mobile {
+          &:nth-child(even) {
+            background: var(--gr-a);
+            * {
+              color: rgba(var(--cl-a), 1);
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .steps-card {
+        @include for-small-tablet {
+          &:nth-child(odd) {
+            background: var(--gr-a);
+            * {
+              color: rgba(var(--cl-a), 1);
+            }
+          }
+        }
+        @include small-tablet {
+          @include for-mobile {
+            &:last-child {
+              background: var(--gr-a);
+              * {
+                color: rgba(var(--cl-a), 1);
+              }
+            }
+          }
+        }
+        @include mobile {
+          &:nth-child(odd) {
+            background: var(--gr-a);
+            * {
+              color: rgba(var(--cl-a), 1);
+            }
+          }
+        }
+      }
+    }
+
+    @include small-tablet {
+      @include for-mobile {
+        grid-template-columns: 1fr 1fr;
+
+        .steps-card {
+          &:last-child {
+            grid-column: 1/3;
+          }
+        }
+      }
+    }
+
+    @include mobile {
+      grid-template-columns: 100%;
+    }
+
+    &--double {
+      @include for-mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include small-tablet {
+        @include for-mobile {
+          .steps-card {
+            min-height: 340px;
+            &:last-child {
+              grid-column: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--siding {
+    .steps-card {
+      @include mobile {
+        justify-content: center;
+      }
+    }
+  }
+
+  &--centered {
+    .steps-card {
+      justify-content: center;
+    }
+  }
+
+  &--cedar {
+    .steps-list__row {
+      @include for-tablet {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      @include tablet {
+        @include for-mobile {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      &--mode {
+        .steps-card {
+          @include tablet {
+            @include for-mobile {
+              &:nth-child(4) {
+                grid-column: 1;
+              }
+              &:last-child {
+                grid-column: 2/4;
+              }
+            }
+          }
+        }
+      }
+
+      @include small-tablet {
+        @include for-mobile {
+          &:nth-child(odd) {
+            .steps-card {
+              &:nth-child(even) {
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+
+              &:last-child {
+                .steps-card__title {
+                  color: rgba(var(--cl-b), 1);
+                }
+                background: rgba(var(--bg-a), 1);
+              }
+            }
+          }
+
+          &:nth-child(even) {
+            .steps-card {
+              &:nth-child(odd) {
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .steps-card {
+      padding: 28px;
+      justify-content: center;
+
+      @include laptop {
+        @include for-tablet {
+          padding: 20px;
+          &__title {
+            font-size: 21px;
+          }
+        }
+      }
+
+      @include tablet {
+        @include for-mobile {
+          &:nth-child(4) {
+            grid-column: 1/3;
+          }
+
+          &:last-child {
+            grid-column: initial;
+          }
+        }
+      }
+
+      @include small-tablet {
+        @include for-mobile {
+          padding: 28px 20px;
+        }
+      }
+
+      @include mobile {
+        min-height: 304px;
+      }
+
+      &__title {
+        @include small-tablet {
+          @include for-mobile {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+
+  &--four {
+    .steps-list__row {
+      @include for-tablet {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include tablet {
+        @include for-mobile {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @include tablet {
+        @include for-mobile {
+          .steps-card {
+            &:nth-child(2) {
+              background: rgba(var(--bg-a), 1);
+              * {
+                color: rgba(var(--cl-b), 1);
+              }
+            }
+            &:first-child {
+              background: var(--gr-a);
+              * {
+                color: rgba(var(--cl-a), 1);
+              }
+            }
+          }
+        }
+      }
+
+      &--mode{
+        @include tablet {
+          @include for-mobile {
+            .steps-card {
+              &:nth-child(3) {
+                background: rgba(var(--bg-a), 1);
+                * {
+                  color: rgba(var(--cl-b), 1);
+                }
+              }
+              &:last-child {
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+            }
+          }
+        }
+
+        @include mobile{
+          .steps-card{
+            &:nth-child(odd){
+              background: rgba(var(--bg-a), 1);
+                * {
+                    color: rgba(var(--cl-b), 1);
+                  }
+            }
+            &:nth-child(even){
+              background: var(--gr-a);
+                * {
+                    color: rgba(var(--cl-a), 1);
+                  }
+            }
+          }
+        }
+      }
+    }
+    .steps-card {
+      padding: 37.5px clamp(37.5px, 5.4054vw, 60px)
+        clamp(35.5px, 3.3333vw, 37.5px);
+      justify-content: center;
+
+      @include laptop {
+        @include for-tablet {
+          padding: 20px;
+          &__title {
+            font-size: 21px;
+          }
+        }
+      }
+
+      @include small-tablet {
+        @include for-mobile {
+          padding: 28px 20px;
+          grid-column: initial !important;
+          min-height: 340px;
+        }
+      }
+
+      @include mobile {
+        min-height: 304px;
+      }
+
+      &__title {
+        @include small-tablet {
+          @include for-mobile {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+
+  &--enginer {
+    display: grid;
+
+    @include for-tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include tablet {
+      @include for-mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .steps-list {
+      &__row {
+        grid-template-columns: 100%;
+
+        &:nth-child(3) {
+          .steps-card {
+            @include tablet {
+              @include for-mobile {
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+            }
+          }
+        }
+        &:last-child {
+          .steps-card {
+            @include tablet {
+              @include for-mobile {
+                background: rgba(var(--bg-a), 1);
+                * {
+                  color: rgba(var(--cl-b), 1);
+                }
+              }
+            }
+          }
+        }
+        &:first-child {
+          .steps-card {
+            @include small-tablet {
+              @include for-mobile {
+                background: rgba(var(--bg-a), 1);
+                * {
+                  color: rgba(var(--cl-b), 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .steps-card {
+      padding: 30px 46px;
+      justify-content: center;
+    }
+  }
+
+  &--lux {
+    display: grid;
+
+    @include for-tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include tablet {
+      @include for-mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .steps-list {
+      &__row {
+        grid-template-columns: 100%;
+
+        &:nth-child(3) {
+          .steps-card {
+            @include tablet {
+              @include for-mobile {
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+            }
+          }
+        }
+        &:last-child {
+          .steps-card {
+            @include tablet {
+              @include for-mobile {
+                background: rgba(var(--bg-a), 1);
+                * {
+                  color: rgba(var(--cl-b), 1);
+                }
+              }
+            }
+          }
+        }
+        &:first-child {
+          .steps-card {
+            @include small-tablet {
+              @include for-mobile {
+                background: rgba(var(--bg-a), 1);
+                * {
+                  color: rgba(var(--cl-b), 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .steps-card {
+      @include tablet {
+        justify-content: center;
+      }
+
+      @include small-tablet {
+        @include for-mobile {
+          min-height: 340px;
+        }
+      }
+
+      @include for-mobile {
+        padding: 35px 35px 34px;
+      }
+      @include mobile {
+        padding: 35px 52px;
+      }
+    }
+  }
+
+  &--long {
+    .steps-list__row {
+      &:first-child {
+        @include tablet {
+          @include for-small-tablet {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .steps-card {
+            &:last-child {
+              @include for-small-tablet {
+                grid-column: 1/4;
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+            }
+          }
+        }
+
+        @include small-tablet {
+          @include for-mobile {
+            .steps-card {
+              min-height: 340px;
+              &:first-child {
+                background: var(--gr-a);
+                * {
+                  color: rgba(var(--cl-a), 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .steps-card {
+      justify-content: center;
+    }
+  }
+}

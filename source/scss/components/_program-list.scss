@@ -1,0 +1,87 @@
+.program-list{
+    display: grid;
+    align-items: center;
+
+    @include for-laptop{
+        grid-gap: 10px 20px;
+    }
+
+    @include laptop{
+        @include for-tablet{
+        grid-gap: 10px;
+        }
+    }
+
+    @include for-tablet{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include tablet{
+        @include for-mobile{
+        grid-gap: 10px 20px;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        align-self: center;
+        }
+    }
+  
+    @include mobile{
+        grid-template-columns: 100%;
+        justify-items: center;
+        grid-gap: 10px;
+    }
+
+    &__item{
+        position: relative;
+
+        &::before{
+            position: absolute;
+            background: var(--gr-a);
+            z-index: -1;
+
+            @include for-mobile{
+                right: 0;
+                height: 2px;
+                width: 50%;
+                top: 50%;
+                transform: translate(50%, -50%);
+            }
+
+            @include mobile{
+                bottom: 0;
+                left: 50%;
+                height: 50%;
+                width: 2px;
+                transform: translate(-50%, 50%);
+            }
+        }
+        &:not(:last-child){
+         @include for-tablet{
+            &::before{
+                content: '';
+            }
+         }
+        }
+
+        &:nth-child(1), &:nth-child(3){
+            @include for-mobile{
+                &::before{
+                    content: '';
+                }
+             }
+        }
+
+        &:not(:last-child){
+            @include mobile{
+               &::before{
+                   content: '';
+               }
+            }
+           }
+
+        @include tablet{
+            width: fit-content;
+        }
+    }
+
+}

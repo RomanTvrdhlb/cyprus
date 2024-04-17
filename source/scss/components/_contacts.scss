@@ -1,0 +1,11 @@
+.contacts {
+  a {
+    display: flex;
+    gap: 11px;
+
+    svg{
+      position: relative;
+      top: 3px;
+    }
+  }
+}

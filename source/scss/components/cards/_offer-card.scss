@@ -1,0 +1,197 @@
+.offers-card {
+  display: grid;
+  
+  @include for-tablet {
+    grid-template-columns: 1fr clamp(400px, 33.5277vw, 460px);
+    grid-gap: clamp(20px, 4.0087vw, 55px);
+  }
+
+  @include tablet {
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    &--mode {
+      display: inline;
+    }
+
+    &-inner {
+      display: inline-block;
+      position: relative;
+      min-width: 180px;
+      height: 47px;
+
+      @include for-mobile{
+        margin-left: 10px;
+      }
+    }
+
+    @include tablet {
+      display: inline;
+      order: -2;
+      margin-bottom: 65px;
+    }
+
+    // @include mobile{
+    //     display: inline-flex;
+    // }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.551vw, 35px);
+
+    @include tablet {
+      display: contents;
+    }
+  }
+
+  &__wrapp {
+    position: relative;
+    display: flex;
+
+    @include for-tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  &__image {
+    display: flex;
+
+    img,
+    picture {
+      border-radius: 30px;
+    }
+
+    &--small {
+      position: absolute;
+
+      @include for-tablet {
+        bottom: 0;
+        left: 0;
+        transform: translateY(40%);
+      }
+
+      @include desktop {
+        @include for-tablet{
+            left: -25px;
+        }
+      }
+
+      @include tablet {
+        display: flex;
+        justify-content: flex-end;
+        top: 0;
+        right: 0;
+        @include for-small-tablet{
+            transform: translateY(-45%);
+        }
+      }
+
+      @media (min-width: (768px)) and (max-width: (910px)) {
+        transform: translate(8%, -45%);
+      }
+
+      @include small-tablet{
+        @include for-mobile{
+            transform: translate(7%, -45%);
+        }
+      }
+
+      @include mobile{
+        @include for-ios{
+            transform: translate(6%, -45%);
+        }
+      }
+
+      @include ios{
+        transform: translate(8%, -45%);
+      }
+    }
+
+    @include tablet {
+      order: -1;
+    }
+
+    @include small-tablet{
+        width: 95%;
+    }
+  }
+
+  &__value {
+    background: rgba(var(--bg-d), 1);
+    transform: rotate(-2deg);
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 7px 19px;
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-2deg);
+    display: block;
+    white-space: nowrap;
+
+    @include for-tablet{
+        transform: translateY(-50%) rotate(-2deg);
+    }
+
+    @include tablet{
+        transform: translateY(-40%) rotate(-2deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+  }
+
+  &__text {
+    display: inline-flex;
+    grid-gap: 16px;
+    font-size: 20px;
+
+    svg {
+      fill: none;
+      position: relative;
+      top: 2px;
+      flex-shrink: 0;
+    }
+
+    &--mode {
+      svg {
+        top: 7px;
+      }
+    }
+  }
+
+  &--one {
+    @include for-tablet {
+      grid-template-columns: clamp(426px, 55.972vw, 806px) 1fr;
+      grid-gap: clamp(20px, 1.6035vw, 22px);
+    }
+
+    .offers-card__top{
+        @include tablet{
+            margin-bottom: 85px;
+        }
+    }
+
+    .offers-card__image--small {
+      @include for-tablet {
+        left: -40px;
+      }
+
+      @include mobile{
+        width: 169px;
+      }
+    }
+  }
+}

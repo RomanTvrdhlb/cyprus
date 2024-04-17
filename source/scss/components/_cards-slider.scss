@@ -1,0 +1,70 @@
+.cards-slider {
+  @include for-mobile {
+    border: 1px solid var(--br-a);
+    overflow: hidden;
+    border-radius: 16px 0;
+    display: flex;
+  }
+
+  @include mobile{
+    width: calc(100% + (var(--container-offset) * 2));
+    margin-left: calc(var(--container-offset) * -1);
+}
+
+&__container{
+    @include mobile{
+        padding:0 var(--container-offset) !important;
+    }
+}
+
+  &__slide {
+    @include for-mobile {
+      display: flex;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--br-a);
+      }
+
+      .risk-card {
+        width: 50%;
+        &:first-child {
+          border-right: 1px solid var(--br-a);
+        }
+      }
+    }
+
+    @include mobile{
+        min-height: 568px;
+        width: 314px;
+        border-radius: 16px 0;
+        border: 1px solid var(--br-a);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .risk-card {
+            height: 100%;
+            &:first-child {
+              padding-bottom: 0;
+            }
+          }
+    }
+  }
+
+  &__wrapper {
+    @include for-mobile {
+      flex-direction: column;
+      height: fit-content;
+      display: flex;
+    }
+  }
+  .swiper-pagination{
+    @include for-mobile{
+        display: none;
+    }
+
+    &-bullet{
+        background-color: rgba(var(--bg-e),1.0);
+      }
+  }
+}

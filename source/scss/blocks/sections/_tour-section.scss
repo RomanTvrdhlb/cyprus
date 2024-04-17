@@ -1,0 +1,112 @@
+.tour-section {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 150px;
+  padding: clamp(63px, 7.2886vw, 100px) 0 clamp(73px, 6.414vw, 88px);
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    @include for-small-tablet {
+      inset: 0 -1px;
+    }
+
+    @include small-tablet {
+      inset: 0;
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+      object-position: top center;
+      overflow: hidden;
+    }
+  }
+
+  &__box {
+    color: rgba(var(--cl-a), 1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: clamp(15px, 1.8222vw, 25px);
+
+    @include for-mobile{
+      max-width: 1160px;
+    }
+
+    @include mobile{
+      &:not(.tour-section__title--mode){
+        display: none;
+      }
+    }
+
+    &--mode{
+      @include for-mobile{
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: clamp(30px, 2.3324vw, 32px);
+  }
+
+  &__details {
+    grid-gap: 20px;
+    margin-bottom: clamp(30px, 3.4257vw, 47px);
+
+    @include for-small-tablet{
+      display: grid;
+      max-width: Min(73.438vw, 752px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet{
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      grid-gap: 14px;
+      padding: clamp(20px, 2.4781vw, 34px) clamp(13px, 2.4781vw, 34px);
+      background-color: rgba(var(--bg-a),1.0);
+      color: rgba(var(--cl-c),1.0);
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+
+      &:last-child {
+        @include for-small-tablet{
+          grid-column: span 2;
+        }
+      }
+
+      img{
+        width: clamp(40px, 5.0292vw, 69px);
+        height: clamp(40px, 5.0292vw, 69px);
+      }
+
+      .text{
+        font-size: clamp(18px, 1.8222vw, 25px);
+      }
+    }
+  }
+
+  &__btn {
+    @include for-mobile{
+      padding: 0 106px;
+    }
+    @include mobile{
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.main-btn {
+  width: fit-content;
+  height: 66px;
+  padding: 5px 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  line-height: 140%;
+  font-weight: 600;
+  color: rgba(var(--cl-a),1.0);
+  border-radius: 50px;
+  background: var(--gr-a);
+  transition: all .4s ease-in-out;
+  font-family: var(--font-family);
+
+  &:hover {
+    box-shadow: 10px -16px 34px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &--mode{
+    position: relative;
+    z-index: 1;
+    background: rgba(var(--bg-e),1.0);
+
+    &::before{
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: rgba(var(--bg-e),1.0);
+      z-index: -1;
+      filter: blur(20px);
+      transition: all .3s;
+    }
+
+    &:hover{
+      box-shadow: none;
+      &::before{
+        filter: blur(10px);
+      }
+    }
+  }
+}
+

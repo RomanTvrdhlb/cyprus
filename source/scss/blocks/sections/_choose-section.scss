@@ -1,0 +1,204 @@
+.choose-section{
+    position: relative;
+    z-index: 1;
+    background-color: rgba(var(--bg-f),1.0);
+    padding: clamp(66px, 8.6486vw, 96px) 0 clamp(66px, 11.0811vw, 123px);
+
+    &__bg{
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        display: flex;
+        
+        @include for-small-tablet{
+            align-items: flex-end;
+            inset: 0;
+        }
+
+        @include small-tablet{
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        img,picture{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__box{
+        display: grid;
+
+        @include for-small-tablet{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        @include small-tablet{
+            grid-template-columns: 100%;
+            grid-gap: 54px;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px; 
+    }
+
+    &__title{
+        max-width: 280px;
+        margin-bottom: 8px;
+        font-family: var(--font-family2);
+        
+        @include small-tablet{
+            align-self: center;
+            text-align: center;
+        }
+    }
+
+    &__image{
+        display: flex;
+        border-radius: 16px 0;
+        overflow: hidden;
+        height: fit-content;
+
+        img,picture{
+            width: 100%;
+           aspect-ratio: 1;
+        }
+
+        @include small-tablet{
+            order: 2;
+        }
+    }
+
+    .choose-list{
+        @include for-small-tablet{
+            margin-top: 27px;
+        }
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(36px, 3.964vw, 44px);
+    }
+
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text{
+        font-weight: 700;
+        color: rgba(var(--cl-b), 1);
+        font-family: var(--font-family);
+        font-size: clamp(16px, 1.6216vw, 18px);
+        line-height: 150%;
+    }
+
+    &--program{
+        @include for-mobile{
+            padding: clamp(126px, 15.3153vw, 170px) 0 clamp(75px, 8.6486vw, 96px);
+        }
+
+        @include mobile{
+            padding: clamp(146px, 15.3153vw, 170px) 0 clamp(75px, 8.6486vw, 96px);
+        }
+
+        .choose-section{
+
+            &__bg{
+                img,picture{
+                    height: auto;
+                }
+
+                @include small-tablet{
+                    top: initial;
+                    bottom: 0;
+                }
+            }
+
+            &__title{
+                max-width: 100%;
+                text-align: center;
+
+                @include mobile{
+                    max-width: 80%;
+                }
+            }
+
+            &__inner{
+                grid-gap: 32px;
+
+                @include mobile{
+                    .choose-section__title{
+                        max-width: 85%;
+                    }
+                }
+            }
+
+            &__box{
+                grid-template-columns: 100%;
+                grid-gap: clamp(65px, 6.3063vw, 70px);
+            }
+        }
+    }
+
+    &--mode{
+            padding: clamp(121px, 12.973vw, 144px) 0 81px;
+            overflow: hidden;
+
+        .main-list{
+            grid-gap: 0;
+
+            &__link{
+                font-weight: 400;
+                color: rgba(var(--cl-b),1.0);
+                font-family: var(--font-family);
+            }
+        }
+
+
+        .choose-list{
+            margin: 0;
+        }
+
+        .choose-section{
+
+            &__bg{
+                img,picture{
+                    height: auto;
+                    min-height: 400px;
+                    
+                    @include small-tablet{
+                        object-position: left bottom;
+                    }
+                }
+
+                @include small-tablet{
+                    top: initial;
+                    bottom: 0;
+                }
+            }
+
+            &__title{
+                max-width: 100%;
+                margin-bottom: 0;
+                @include mobile{
+                    text-align: center;
+                    justify-self: center;
+                    max-width: 80%;
+                }
+            }
+
+
+            &__box{
+                grid-template-columns: 100%;
+                grid-gap: 32px;
+            }
+        }
+    }
+}

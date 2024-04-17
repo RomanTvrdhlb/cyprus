@@ -1,0 +1,55 @@
+.areas-slider{
+z-index: 5;
+position: relative;
+
+    @include tablet{
+        width: calc(100% + (var(--container-offset) * 2));
+        margin-left: calc(var(--container-offset) * -1);
+    }
+
+    &__container{
+        @include tablet {
+            padding: 0 var(--container-offset) !important;
+        }
+    }
+
+    &__slide{
+
+        @include for-tablet{
+            width: 100% !important;
+            margin: 0 !important;
+        }
+
+        ul{
+            grid-gap: 16px 30px;
+
+            @include for-tablet{
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            @include for-mobile{
+                grid-template-columns: repeat(2, 1fr);
+                display: grid;
+            }
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__wrapper{
+        @include for-tablet{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 16px;
+        }
+    }
+
+    .slider-pagination{
+        @include for-tablet{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.quiz-status{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__point{
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: rgba(var(--bg-e),1.0);
+          
+            z-index: 4;
+            clip-path: polygon(3% 27%, 50% 3%, 97% 27%, 97% 73%, 50% 97%, 3% 73%);
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                inset: 3.5px;
+                clip-path: inherit;
+                background: var(--gr-a);
+                transition: all .3s;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &:first-of-type, &.active{
+                &::before{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__line{
+            border-radius: 200px;
+            height: 10px;
+            background-color: rgba(var(--bg-e),1.0);
+            position: absolute;
+            inset: 0 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        &__thumb{
+            z-index: 2;
+            background: var(--gr-a);
+            display: block;
+            height: 100%;
+            width: 0;
+        }
+}

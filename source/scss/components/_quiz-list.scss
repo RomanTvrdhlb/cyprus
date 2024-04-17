@@ -1,0 +1,14 @@
+.quiz-list{
+
+
+    &__item{
+        display: flex;
+        
+        &:not(:first-of-type){
+            display: none;
+        }
+
+
+        min-height: 220px;
+    }
+}

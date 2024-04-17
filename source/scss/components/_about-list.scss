@@ -1,0 +1,21 @@
+.about-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(50px, 5.102vw, 70px);
+  
+  &__item {
+    display: flex;
+
+    @include for-small-tablet {
+      &:nth-child(even) {
+        .about-card{
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+}

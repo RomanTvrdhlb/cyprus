@@ -1,0 +1,80 @@
+.offers-list{
+    display: flex;
+    flex-direction: column;
+
+    @include for-tablet{
+        grid-gap: 261px;
+    }
+
+    @include tablet{
+        grid-gap: 90px;
+    }
+
+    &__item{
+
+        &:nth-child(even){
+            .offers-card{
+                @include for-tablet{
+                    grid-template-columns: clamp(400px, 33.5277vw, 460px) 1fr;
+                    grid-gap: clamp(20px, 2.551vw, 35px);
+                }
+                &__box{
+                    @include for-tablet{
+                    order: 1;
+                    }
+                }
+
+                &__wrapp{
+                    @include for-tablet{
+                    order: 2;
+                    justify-content: flex-start;
+                }
+            }
+
+                &__image{
+                    &--small{
+                        @include for-tablet{
+                        left: initial;
+                        right: 0;
+                        }
+                    }
+                }
+
+                &--two{
+                    @include for-tablet{
+                        grid-template-columns: 1fr clamp(400px, 52.917vw, 762px);
+                        grid-gap: clamp(20px, 2.1866vw, 30px);
+                    }
+
+                    .offers-card__image--small{
+                        @include for-tablet{
+                            right: -30px;
+                        }
+
+                        @include mobile{
+                            width: 173px;
+                        }
+                    }
+
+                    .offers-card__top{
+                        @include tablet{
+                            margin-bottom: 95px;
+                        }
+                    }
+                }
+
+                &--stydies{
+                    @include for-tablet{
+                        grid-template-columns: 1fr clamp(447px, 57.431vw, 827px);
+                    }
+                    .offers-card__image--small{
+                        @include for-tablet{
+                            right: -35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

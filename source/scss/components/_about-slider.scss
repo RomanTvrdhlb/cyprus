@@ -1,0 +1,144 @@
+.about-slider {
+  position: relative;
+  height: fit-content;
+
+  --btnsWidth: calc(100% + 40px);
+  --slideWidth: clamp(167px, 25.781vw, 264px);
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    z-index: 2;
+    pointer-events: none;
+
+    @include for-tablet {
+      left: calc((var(--card-width) * 2) + 30px);
+      width: 50vw;
+      background-color: rgba(var(--bg-a), 0.5);
+      z-index: 5;
+      content: "";
+      border-radius: 16px 0;
+      box-shadow: -11px 0px 9px 2px rgba(255,255,255,.5);
+    }
+
+    @include tablet {
+      content: "";
+      width: clamp(96px, 12.1622vw, 135px);
+      right: calc(var(--container-offset) * -1);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='376' fill='none'%3E%3Cpath fill='url(%23paint0_linear_2376_17238)' d='M0 0h96v376H0z'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2376_17238' x1='96' x2='-1.52382e-06' y1='188' y2='188' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23EAEAEA'/%3E%3Cstop offset='1' stop-color='%23EAEAEA' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+      background-position: top right;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include for-desktop {
+    margin-right: -110px;
+  }
+
+  .services-card {
+    @include for-desktop {
+      width: 100%;
+    }
+    width: var(--slideWidth);
+    min-height: clamp(180px, 22.852vw, 234px);
+
+    &__box {
+      position: relative;
+      z-index: 1;
+
+      &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(var(--bg-a), 0.4);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.8s;
+        pointer-events: none;
+      }
+    }
+    &:hover {
+      .services-card {
+        &__box {
+          background: initial;
+          &:after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  &__slide {
+    width: var(--slideWidth);
+  }
+
+  &__container {
+    @include for-tablet {
+      width: calc(
+        ((100vw - var(--container-width)) / 2) + (var(--container-offset) * 2) +
+          100%
+      );
+      padding-right: calc(var(--container-offset));
+    }
+
+    @include tablet {
+      width: calc(100% + (var(--container-offset) * 2));
+      margin-left: calc(var(--container-offset) * -1);
+      padding: 0 var(--container-offset);
+    }
+  }
+
+  &__wrapper {
+    @include for-tablet {
+      padding-right: 500px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: calc(100% + clamp(80px, 6.944vw, 100px));
+
+    @media (min-width: (1240px)) and (max-width: (1375px)) {
+      width: var(--btnsWidth);
+    }
+
+    @include for-desktop {
+      width: 100%;
+    }
+
+    @include laptop {
+      width: var(--btnsWidth);
+    }
+
+    @include tablet {
+      left: 0;
+      width: 100%;
+    }
+
+    // @include laptop {
+    //   margin-top: 46px;
+    // }
+
+    .arrow-button {
+      &--prev {
+        display: none;
+      }
+    }
+  }
+}

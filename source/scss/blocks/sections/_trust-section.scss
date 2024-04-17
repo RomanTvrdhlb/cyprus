@@ -1,0 +1,119 @@
+.trust-section {
+  position: relative;
+  padding: 96px 0;
+  z-index: 2;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+      object-position: top;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+    align-items: center;
+    text-align: center;
+
+    .trust-section__title {
+      max-width: Min(82.8829vw, 920px);
+
+      br{
+        @include for-ios{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(20px, 5.4054vw, 60px);
+
+    @include mobile {
+      grid-template-columns: 100%;
+      grid-gap: 24px;
+
+      .main-btn {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 24px;
+
+    p {
+      font-family: var(--font-family2);
+      font-weight: 500;
+    }
+
+    @include ios {
+      .h2 {
+        max-width: 60%;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
+    position: relative;
+    padding: 37px 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      border-left: 1px solid var(--br-b);
+      left: calc((clamp(20px, 5.4054vw, 60px) / 2) * -1);
+      transform: translate(50%, -50%);
+      top: 50%;
+    }
+
+    @include mobile {
+      display: contents;
+
+      p {
+        position: relative;
+        padding-left: 16px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 100%;
+          border-left: 1px solid var(--br-b);
+          left: 0;
+          transform: translate(-50%, -50%);
+          top: 50%;
+        }
+      }
+    }
+  }
+
+  .main-btn {
+    padding: 10px 32px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family2);
+  }
+}

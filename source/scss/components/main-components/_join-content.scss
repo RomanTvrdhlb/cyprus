@@ -1,0 +1,166 @@
+.join-content{
+
+    &__top{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 4px;
+        margin-bottom: 6px;
+    }
+
+    &__title{
+        font-family: var(--font-family2);
+        font-weight: 700;
+        font-size: 20px;
+        color: rgba(var(--cl-f),1.0);
+    }
+
+    &__subtitle{
+        font-family: var(--font-family2);
+        font-style: italic;
+        font-weight: 500;
+        font-size: 13px;
+        color: rgba(var(--cl-f),1.0);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+    }
+
+    &__input{
+            padding-right: 40px;
+            &::placeholder{
+                white-space: pre-wrap;
+            }
+    }
+    
+        #adress{
+            @media (max-width: (615px)) {
+            height: 89px;
+
+            &::placeholder{
+                position: relative;
+                top: -10px;
+            }
+            }
+        }
+
+        #adress2{
+          @include mobile{
+                height: 89px;
+    
+                &::placeholder{
+                    position: relative;
+                    top: -10px;
+                }
+            }
+        }
+
+        #mail2, #phone2{
+                  &::placeholder{
+                      position: relative;
+                      top: -10px;
+                  }
+              
+          }
+
+          #phone2{
+            @media (max-width: (645px)) and (min-width: (459px)) {
+                height: 100px;
+                &::placeholder{
+                    top: -20px;
+                }
+            }
+            @media (max-width: (459px)) and (min-width: (375px)) {
+                height: 120px;
+                &::placeholder{
+                    top: -30px;
+                }
+            }
+            @media (max-width: (375px)) and (min-width: (347px)) {
+                height: 140px;
+                &::placeholder{
+                    top: -39px;
+                }
+            }
+            @media (max-width: (347px)) {
+                height: 149px;
+                &::placeholder{
+                    top: -50px;
+                }
+            }
+        }
+
+        #mail2{
+            @media (max-width: (584px)) and (min-width: (417px)) {
+                height: 100px;
+                &::placeholder{
+                    top: -20px;
+                }
+            }
+            @media (max-width: (417px)) and (min-width: (345px)) {
+                height: 120px;
+                &::placeholder{
+                    top: -30px;
+                }
+            }
+            @media (max-width: (345px)) {
+                height: 140px;
+                &::placeholder{
+                    top: -39px;
+                }
+            }
+        }
+    
+    &__inner{
+        display: grid;
+        grid-gap: 24px;
+
+        
+        @include for-small-tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 100%;
+        }
+
+        &--mode{
+            grid-gap: 22px;
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 15px clamp(20px, 3.6036vw, 40px);
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    &__btn{
+        width: 100%;
+        align-self: center;
+
+        @include for-mobile{
+            max-width: 445px;
+        }
+    }
+
+    &__quest{
+        display: flex;
+        align-items: center;
+        grid-gap: 28px;
+    }
+}

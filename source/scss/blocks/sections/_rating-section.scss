@@ -1,0 +1,52 @@
+.rating-section{
+    position: relative;
+    z-index: 1;
+    
+    @include for-laptop{
+        padding: clamp(76px, 8.6486vw, 96px) 0 clamp(54px, 11.982vw, 133px);
+    }
+
+    @include laptop{
+        padding: clamp(76px, 8.6486vw, 96px) 0 clamp(54px, 8.6486vw, 96px);
+    }
+
+    &__bg{
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap:  clamp(58px, 7.9279vw, 88px);
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        
+        @include for-mobile{
+            grid-gap: 43px;
+        }
+
+        @include mobile{
+            grid-gap: 50px;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family2);
+        text-align: center;
+        @include mobile{
+            max-width: 350px;
+            align-self: center;
+        }
+    }
+}

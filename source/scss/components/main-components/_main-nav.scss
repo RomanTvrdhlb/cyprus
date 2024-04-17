@@ -1,0 +1,102 @@
+.main-nav{
+    position: absolute;
+    bottom: 0;
+   
+    z-index: 5;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+    background: rgba(var(--bg-a),1.0);
+    border-radius: clamp(40px, 5.102vw, 70px);
+    padding: clamp(23px, 2.4781vw, 34px)  clamp(21px, 3.4257vw, 47px);
+    width: 100%;
+    
+    @include for-laptop{
+        padding: clamp(23px, 2.4781vw, 34px)  clamp(21px, 3.4257vw, 47px);
+    }
+
+    @include laptop{
+        padding: clamp(23px, 2.4781vw, 34px)  clamp(21px, 1.8222vw, 25px);
+    }
+
+    @include for-tablet{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        right: 0;
+        transform: translateY(50%);
+        left: 0;
+        grid-gap: 18px;
+    }
+
+    @include tablet{
+        grid-gap: 18px 34px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+    }
+
+    @include mobile{
+        transform: translate(-50%, 75%);
+    }
+
+    &__icon{
+        width: clamp(40px, 5.0292vw, 69px);
+        height: clamp(40px, 5.0292vw, 69px);
+        flex-shrink: 0;
+    }
+
+    &__item{
+        position: relative;
+
+        &:first-child, &:nth-child(3){
+            @include tablet{
+            &::before{
+                position: absolute;
+                content: '';
+                height: 26px;
+                width: 1px;
+                border-right: solid 1px var(--br-b);
+                top: 50%;
+                right: -17px;
+                transform: translate(50%, -50%);
+                pointer-events: none;
+            }
+        }
+        }
+
+        &:nth-child(3){
+            @include tablet{
+                .main-nav__link{
+                justify-content: end;
+            }
+        }
+        }
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(10px, 1.0933vw, 15px);
+        font-weight: 500;
+        font-size: 25px;
+        text-align: center;
+        color: rgba(var(--cl-c),1.0);
+
+        
+        &-text{
+
+            &:not(.main-nav__link-text--mode){
+                @include tablet{
+                    display: none;
+                }
+            }
+
+            &--mode{
+                @include for-tablet{
+                    display: none;
+                }
+            }
+        }
+    }
+}

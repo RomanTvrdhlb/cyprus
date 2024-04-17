@@ -1,0 +1,61 @@
+.about-company{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-mobile{
+        grid-gap: 10px;
+    }
+
+    @include mobile{
+        grid-gap: 32px;
+        flex-direction: column;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+        align-items: center;
+    }
+
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        z-index: 1;
+
+        &::before{
+            position: absolute;
+            content: '';
+            inset: 0;
+            background-image: var(--hexagon-icon);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &__value{
+        font-family: var(--font-family2);
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+        color: rgba(var(--cl-a),1.0);
+
+        i{
+            font-style: normal;
+            font-size: 24px;
+            line-height: 125%;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        font-family: var(--font-family2);
+    }
+}

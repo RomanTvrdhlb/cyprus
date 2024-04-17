@@ -1,0 +1,45 @@
+.rating-slider {
+  position: relative;
+
+  &__container {
+    @include laptop {
+      width: calc(100% + (var(--container-offset) * 2));
+      margin-left: calc(var(--container-offset) * -1);
+      padding: 0 var(--container-offset);
+    }
+  }
+
+  &__slide {
+    height: 280px;
+    width: clamp(270px, 31.5315vw, 350px);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 30px;
+
+    @include for-laptop {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+
+      width: calc(100% + 120px);
+    }
+
+    @include laptop {
+      margin-top: 46px;
+    }
+
+    .arrow-button {
+      &--prev {
+        @include for-laptop {
+          display: none;
+        }
+      }
+    }
+  }
+}

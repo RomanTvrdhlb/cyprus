@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  padding: 26px 0;
+  position: absolute;
+  z-index: 15;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__btn {
+    height: clamp(51px, 4.365vw, 66px);
+    padding: 0 clamp(38px, 4.034vw, 61px);
+    background: transparent;
+    border: 2px solid rgba(var(--bg-a),1.0);
+    font-size: clamp(18px, 1.653vw, 25px);
+
+    &:hover {
+      background: rgba(var(--bg-d),1.0);
+    }
+  }
+
+  .logo{
+    margin-left: -30px;
+    svg{
+      display: flex;
+      width: clamp(168px, 21.0641vw, 289px);
+    }
+  }
+}
+
+

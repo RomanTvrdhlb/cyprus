@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html')
+
+    <main>
+      <section class="first-section">
+        <div class="first-section__bg">
+          <picture>
+            <source type='image/webp' media='(max-width: 576px)' srcset='img/index/mainMob.webp'>
+            <source media='(max-width: 576px)' srcset='img/index/mainMob.png'>
+            <source type='image/webp' srcset='img/index/main.webp'>
+            <img width='1548' height='822' src='img/index/main.png' alt='image'>
+          </picture>
+        </div>
+        <div class="container">
+          <div class="first-section__box">
+            <h1 class="first-section__title">НЕДВИЖИМОСТЬ НА СЕВЕРНОМ КИПРЕ</h1>
+            <p class="first-section__text text">Мы поможем с покупкой недвижимости: для жизни, отдыха, или инвестиций. Большой выбор апаратментов от комфортных студий, до роскошных вилл.</p>
+            <button class="first-section__btn main-btn">Получить подборку</button>
+
+            <ul class="main-nav">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span class="main-nav__icon">
+                    <img width='69' height='69' src="./img/sprite/living.svg" alt="image">
+                  
+                  </span>
+                  Виллы
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span class="main-nav__icon">
+                    <img width='69' height='69' src="./img/sprite/living2.svg" alt="image">
+                   
+                  </span>
+                  Студии
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span class="main-nav__icon">
+                    <img width='69' height='69' src="./img/sprite/living3.svg" alt="image">
+                  
+                  </span>
+                  <span class="main-nav__link-text">Апартаменты 1+1</span>
+                  <span class="main-nav__link-text main-nav__link-text--mode">1+1</span>
+                  
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span class="main-nav__icon">
+                    <img width='69' height='69' src="./img/sprite/living4.svg" alt="image">
+                   
+                  </span>
+                  <span class="main-nav__link-text">Апартаменты 2+1</span>
+                  <span class="main-nav__link-text main-nav__link-text--mode">2+1</span>
+                  
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="offers-section">
+        <div class="container">
+          <div class="offers-section__box">
+
+            <div class="offers-section__top">
+              <h2 class="offers-section__title h2">Самые горячие 
+                предложения 
+                на рынке 
+                Северного Кипра</h2>
+                <ul class="images-list images-list--mode">
+                  <li class="images-list__row images-list__row--mode">
+                    <div class="images-list__icon images-list__icon--small">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/img9.webp'>
+                        <img width='103' height='102' src='img/cards/img9.png' alt='image'>
+                      </picture>
+                    </div>
+                 
+                    <div class="images-list__icon images-list__icon--mode">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/img10.webp'>
+                        <img width='146' height='146' src='img/cards/img10.png' alt='image'>
+                      </picture>
+                    </div>
+                 
+                    <div class="images-list__icon images-list__icon--medium">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/img11.webp'>
+                        <img width='176' height='176' src='img/cards/img11.png' alt='image'>
+                      </picture>
+                    </div>
+                 
+                    <div class="images-list__icon">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/img12.webp'>
+                        <img width='216' height='216' src='img/cards/img12.png' alt='image'>
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="images-list__row">
+                      <div class="images-list__icon images-list__icon--medium">
+                        <picture>
+                          <source type='image/webp' srcset='img/cards/img13.webp'>
+                          <img width='152' height='150' src='img/cards/img13.png' alt='image'>
+                        </picture>
+                      </div>
+                      <div class="images-list__icon">
+                        <picture>
+                          <source type='image/webp' srcset='img/cards/img14.webp'>
+                          <img width='206' height='204' src='img/cards/img14.png' alt='image'>
+                        </picture>
+                      </div>
+                      <div class="images-list__icon">
+                        <picture>
+                          <source type='image/webp' srcset='img/cards/img15.webp'>
+                          <img width='241' height='241' src='img/cards/img15.png' alt='image'>
+                        </picture>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+
+
+            <ul class="offers-list">
+              <li class="offers-list__item">
+                <div class="offers-card">
+                  <div class="offers-card__wrapp">
+                    <div class="offers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img1.webp'>
+                        <img width='792' height='460' src='img/index/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="offers-card__image offers-card__image--small">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img2.webp'>
+                        <img width='258' height='441' src='img/index/img2.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="offers-card__box">
+                    <div class="offers-card__top">
+                      <span class="offers-card__title subtitle">Виллы</span>
+                      <div class="offers-card__top-inner">
+                        <span class="offers-card__value">от 350.000£</span>
+                      </div>
+                    </div>
+                    
+                    <ul class="offers-card__list">
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='21'>
+                            <use href='img/sprite/sprite.svg#home'></use>
+                          </svg>
+                          Вилла - отдельно стоящий дом.
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='21'>
+                            <use href='img/sprite/sprite.svg#icon1'></use>
+                          </svg>
+                          Отличный вариант для жизни и отдыха.
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='19'>
+                            <use href='img/sprite/sprite.svg#icon2'></use>
+                          </svg>
+                          Cобственный бассейн
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='26'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                          Прекрасный вид на море и горы. 
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text offers-card__text--mode">
+                          <svg width='25' height='18'>
+                            <use href='img/sprite/sprite.svg#icon4'></use>
+                          </svg>
+                          Первая и вторая береговая линии.
+                        </span>
+                      </li>
+                    </ul>
+
+                    <button class="offer-card__btn main-btn">Смотреть виллы</button>
+                  </div>
+                </div>
+              </li>
+              <li class="offers-list__item">
+                <div class="offers-card offers-card--stydies">
+                  <div class="offers-card__wrapp">
+                    <div class="offers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img3.webp'>
+                        <img width='792' height='460' src='img/index/img3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="offers-card__image offers-card__image--small">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img4.webp'>
+                        <img width='577' height='208' src='img/index/img4.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="offers-card__box">
+                    <div class="offers-card__top">
+                      <span class="offers-card__title subtitle">Студии</span>
+                      <div class="offers-card__top-inner">
+                        <span class="offers-card__value">от 80.000£</span>
+                      </div>
+                    </div>
+
+                    <ul class="offers-card__list">
+              
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='21'>
+                            <use href='img/sprite/sprite.svg#icon1'></use>
+                          </svg>
+                          Хороший вариант для отдыха. 
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='20'>
+                            <use href='img/sprite/sprite.svg#icon5'></use>
+                          </svg>
+                          Экономичные, уютные апартаменты
+                          для сдачи в краткосрочную аренду. 
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='26'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                          Первая и вторая береговая линия.  
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text offers-card__text--mode">
+                          <svg width='25' height='18'>
+                            <use href='img/sprite/sprite.svg#icon4'></use>
+                          </svg>
+                          Вид на море или горы.
+                        </span>
+                      </li>
+                    </ul>
+
+                    <button class="offer-card__btn main-btn">Выбрать студию</button>
+                  </div>
+                </div>
+              </li>
+              <li class="offers-list__item">
+                <div class="offers-card offers-card--one">
+                  <div class="offers-card__wrapp">
+                    <div class="offers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img5.webp'>
+                        <img width='792' height='460' src='img/index/img5.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="offers-card__image offers-card__image--small">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img6.webp'>
+                        <img width='383' height='256' src='img/index/img6.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="offers-card__box">
+                    <div class="offers-card__top  offers-card__top--mode">
+                      <span class="offers-card__title subtitle">Апартаменты 1+1</span>
+                      <div class="offers-card__top-inner">
+                        <span class="offers-card__value">от 110.000£</span>
+                      </div>
+                    </div>
+                   
+                    <ul class="offers-card__list">
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='21'>
+                            <use href='img/sprite/sprite.svg#home'></use>
+                          </svg>
+                          Апаратменты с одной спальней. 
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='21'>
+                            <use href='img/sprite/sprite.svg#icon1'></use>
+                          </svg>
+                          Для постоянного проживания или отдыха.
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='20'>
+                            <use href='img/sprite/sprite.svg#icon5'></use>
+                          </svg>
+                          Для сдачи в долгосрочную или краткосрочную аренду.
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='26'>
+                            <use href='img/sprite/sprite.svg#icon6'></use>
+                          </svg>
+                          Хорошо подходят под перепродажу.
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='22'>
+                            <use href='img/sprite/sprite.svg#icon2'></use>
+                          </svg>
+                          Распологаются в комплексах 
+                    с развитой инфраструктурой. 
+                        </span>
+                      </li>
+                    </ul>
+
+                    <button class="offer-card__btn main-btn">Выбрать квартиру</button>
+                  </div>
+                </div>
+              </li>
+              <li class="offers-list__item">
+                <div class="offers-card offers-card--two">
+                  <div class="offers-card__wrapp">
+                    <div class="offers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img7.webp'>
+                        <img width='792' height='460' src='img/index/img7.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="offers-card__image offers-card__image--small">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/img8.webp'>
+                        <img width='413' height='309' src='img/index/img8.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="offers-card__box">
+                    <div class="offers-card__top  offers-card__top--mode">
+                      <span class="offers-card__title subtitle">Апартаменты 2+1</span>
+                      <div class="offers-card__top-inner">
+                        <span class="offers-card__value">от 180.000£</span>
+                      </div>
+                    </div>
+
+                    <ul class="offers-card__list">
+              
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='21'>
+                            <use href='img/sprite/sprite.svg#icon5'></use>
+                          </svg>
+                          Апаратменты с двумя спальнями.
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='20'>
+                            <use href='img/sprite/sprite.svg#icon1'></use>
+                          </svg>
+                          Отличный вариант для проживания 
+                    семьи с детьми или сдачи в аренду. 
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text">
+                          <svg width='25' height='26'>
+                            <use href='img/sprite/sprite.svg#icon6'></use>
+                          </svg>
+                          Пользуются большим спросом у инвесторов.  
+                        </span>
+                      </li>
+                      <li class="offers-card__item">
+                        <span class="offers-card__text offers-card__text--mode">
+                          <svg width='25' height='18'>
+                            <use href='img/sprite/sprite.svg#icon4'></use>
+                          </svg>
+                          Расположены в комплексах с 
+                    премиальной инфраструктурой.
+                        </span>
+                      </li>
+                    </ul>
+
+                    <button class="offer-card__btn main-btn">Узнать больше</button>
+                  </div>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour-section">
+        <div class="tour-section__bg">
+          <picture>
+            <source type='image/webp' srcset='img/index/tour.webp'>
+            <img width='1548' height='822' src='img/index/tour.png' alt='image'>
+          </picture>
+        </div>
+        <div class="container">
+          <div class="tour-section__box">
+            <h2 class="tour-section__title">Приглашаем Вас в ознакомительный тур </h2>
+            <h2 class="tour-section__title tour-section__title--mode">Приглашаем Вас в тур-знакомство</h2>
+
+            <p class="tour-section__text text">по недвижимости Северного Кипра</p>
+
+            <ul class="tour-section__details">
+              <li>
+                <img width='69' height='69' src="./img/sprite/aero.svg" alt="image">
+                <span class="text">Трансфер с аэропорта</span>
+              </li>
+              <li>
+                <img width='69' height='69' src="./img/sprite/living.svg" alt="image">
+                <span class="text">Трехдневное проживание</span>
+              </li>
+              <li>
+                <img width='69' height='69' src="./img/sprite/presentation.svg" alt="image">
+                <span class="text">Презентации у застройщиков</span>
+              </li>
+              <li>
+                <img width='69' height='69' src="./img/sprite/show.svg" alt="image">
+                <span class="text">Показ недвижимости</span>
+              </li>
+              <li>
+                <img width='69' height='69' src="./img/sprite/exp.svg" alt="image">
+                <span class="text">Экскурсия по достопримечательностям Северного Кипра</span>
+              </li>
+            </ul>
+
+            <button class="tour-section__btn main-btn">Записаться</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="container">
+          <div class="about-section__box">
+            <h4 class="about-section__title h2">Почему стоит<br>
+               выбрать <span class="about-section__title-icon"><svg width='491' height='115'>
+                 <use href='img/sprite/sprite.svg#logo2'></use>
+               </svg></span>
+            </h4>
+
+            <ul class="about-list">
+              <li class="about-list__item">
+                <div class="about-card">
+                  <div class="about-card__image">
+                    <picture>
+                      <source type='image/webp' media='(max-width: 767px)' srcset='img/cards/card5mob.webp'>
+                      <source media='(max-width: 767px)' srcset='img/cards/card5mob.png'>
+                      <source type='image/webp' srcset='img/cards/card5.webp'>
+                      <img width='676' height='374' src='img/cards/card5.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="about-card__box">
+                    <span class="about-card__title">Полное юридическое<br>
+                      сопровождение сделки</span>
+                    <p>Вам не нужно ломать голову о том, как правильно купить недвижимость. Мы возьмем полную ответственность на себя и проверим ваш объект, проследим за тем, чтобы сделка соответствовала 
+                      законодательству.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="about-list__item">
+                <div class="about-card">
+                  <div class="about-card__image">
+                    <picture>
+                      <source type='image/webp' srcset='img/cards/card6.webp'>
+                      <img width='703' height='362' src='img/cards/card6.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="about-card__box">
+                    <span class="about-card__title">Постпродажный<br>
+                      Сервис</span>
+                    <p>Мы не просто продаем недвижимость, мы оказываем нашим клиентам лучший сервис после покупки. 
+                      Помогаем с переездом и обустройством апаратментов. Выполним дизайнерский ремонт под заказ. Поможем
+                      устроить ваших детей в садик или школу. Станем вашим проводником и поможем освоится на острове</p>
+                  </div>
+                </div>
+              </li>
+              <li class="about-list__item">
+                <div class="about-card">
+                  <div class="about-card__image">
+                    <picture>
+                      <source type='image/webp' media='(max-width: 767px)' srcset='img/cards/card7mob.webp'>
+                      <source media='(max-width: 767px)' srcset='img/cards/card7mob.png'>
+                      <source type='image/webp' srcset='img/cards/card7.webp'>
+                      <img width='792' height='426' src='img/cards/card7.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="about-card__box">
+                    <span class="about-card__title">Помощь с<br> 
+                      переводом Денег и<br> открытием бизнеса</span>
+                    <p>Поможем вывести ваш капитал из любой страны. Поможем с открытием счета в банке и оформлением фирмы</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        
+          </div>
+        </div>
+      </section>
+
+      <section class="sales-section">
+        <div class="container">
+          <div class="sales-section__box">
+            <h5 class="sales-section__title h2">Закрытые<br> продажи 
+              <span class="main-label">
+                <span class="main-label__text" data-label>Уникальная возможность приобрести объекты недвижимости на 5-10% дешевле</span>
+              </span>
+            </h5>
+
+            <div class="sales-section__inner">
+              <ul class="sales-list" data-content-more>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card1.webp'>
+                        <img width='676' height='374' src='img/cards/card1.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 4564</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">85.000£</span>
+                            <span class="sales-card__text">80.750£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">120.000£</span>
+                            <span class="sales-card__text">114.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">180.000£</span>
+                            <span class="sales-card__text">171.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card2.webp'>
+                        <img width='676' height='374' src='img/cards/card2.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 4582</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">80.000£</span>
+                            <span class="sales-card__text">72.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">110.000£</span>
+                            <span class="sales-card__text">99.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">150.000£</span>
+                            <span class="sales-card__text">135.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card3.webp'>
+                        <img width='676' height='374' src='img/cards/card3.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 4762</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">85.000£</span>
+                            <span class="sales-card__text">80.750£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">120.000£</span>
+                            <span class="sales-card__text">114.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">180.000£</span>
+                            <span class="sales-card__text">171.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card4.webp'>
+                        <img width='676' height='374' src='img/cards/card4.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 3654</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">80.000£</span>
+                            <span class="sales-card__text">72.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">110.000£</span>
+                            <span class="sales-card__text">99.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">150.000£</span>
+                            <span class="sales-card__text">135.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card3.webp'>
+                        <img width='676' height='374' src='img/cards/card3.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 4762</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">85.000£</span>
+                            <span class="sales-card__text">80.750£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">120.000£</span>
+                            <span class="sales-card__text">114.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">180.000£</span>
+                            <span class="sales-card__text">171.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card4.webp'>
+                        <img width='676' height='374' src='img/cards/card4.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 3654</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">80.000£</span>
+                            <span class="sales-card__text">72.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">110.000£</span>
+                            <span class="sales-card__text">99.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">150.000£</span>
+                            <span class="sales-card__text">135.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card3.webp'>
+                        <img width='676' height='374' src='img/cards/card3.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 4762</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">85.000£</span>
+                            <span class="sales-card__text">80.750£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">120.000£</span>
+                            <span class="sales-card__text">114.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">180.000£</span>
+                            <span class="sales-card__text">171.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sales-list__item">
+                  <div class="sales-card">
+                    <div class="sales-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/cards/card4.webp'>
+                        <img width='676' height='374' src='img/cards/card4.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="sales-card__box">
+                      <div class="sales-card__title title">Комплекс 
+                        <div class="main-label">
+                          <span class="main-label__text">код 3654</span>
+                        </div>
+                      </div>
+
+                      <ul class="sales-card__list">
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build1'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Студии</span>
+                            <span class="sales-card__text line">80.000£</span>
+                            <span class="sales-card__text">72.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#icon5'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">1+1</span>
+                            <span class="sales-card__text line">110.000£</span>
+                            <span class="sales-card__text">99.000£</span>
+                          </p>
+                        </li>
+                        <li class="sales-card__item">
+                          <span class="sales-card__icon">
+                            <svg width='21' height='21'>
+                              <use href='img/sprite/sprite.svg#build2'></use>
+                            </svg>
+                          </span>
+                          <p>
+                            <span class="sales-card__text">Пентхаус 2+1</span>
+                            <span class="sales-card__text line">150.000£</span>
+                            <span class="sales-card__text">135.000£</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="sales-section__bg"></div>
+              <button class="main-btn main-btn--mode" data-more>Получить доступ</button>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="container">
+          <div class="faq-section__box">
+            <ul class="images-list">
+              <li class="images-list__row images-list__row--mode">
+                <div class="images-list__icon images-list__icon--small">
+                  <picture>
+                    <source type='image/webp' srcset='img/cards/img5.webp'>
+                    <img width='103' height='102' src='img/cards/img5.png' alt='image'>
+                  </picture>
+                </div>
+             
+                <div class="images-list__icon images-list__icon--medium">
+                  <picture>
+                    <source type='image/webp' srcset='img/cards/img6.webp'>
+                    <img width='146' height='146' src='img/cards/img6.png' alt='image'>
+                  </picture>
+                </div>
+             
+                <div class="images-list__icon images-list__icon--mode">
+                  <picture>
+                    <source type='image/webp' srcset='img/cards/img7.webp'>
+                    <img width='176' height='176' src='img/cards/img7.png' alt='image'>
+                  </picture>
+                </div>
+             
+                <div class="images-list__icon">
+                  <picture>
+                    <source type='image/webp' srcset='img/cards/img8.webp'>
+                    <img width='216' height='216' src='img/cards/img8.png' alt='image'>
+                  </picture>
+                </div>
+              </li>
+              <li class="images-list__row">
+                  <div class="images-list__icon images-list__icon--small">
+                    <picture>
+                      <source type='image/webp' srcset='img/cards/img1.webp'>
+                      <img width='152' height='150' src='img/cards/img1.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="images-list__icon  images-list__icon--medium">
+                    <picture>
+                      <source type='image/webp' srcset='img/cards/img2.webp'>
+                      <img width='206' height='204' src='img/cards/img2.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="images-list__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/cards/img3.webp'>
+                      <img width='241' height='241' src='img/cards/img3.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="images-list__icon">
+                    <picture>
+                      <source type='image/webp' srcset='img/cards/img4.webp'>
+                      <img width='241' height='241' src='img/cards/img4.png' alt='image'>
+                    </picture>
+                  </div>
+              </li>
+            </ul>
+            <div class="faq-section__inner">
+              <h6 class="faq-section__title h2">Остались вопросы?</h6>
+              <p class="faq-section__text text">Получи индивидуальную Zoom консультацию с экспертом Cyprus Life</p>
+              <button class="faq-section__btn main-btn">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    <!-- @include('partials/modals.html') -->
+  </div>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

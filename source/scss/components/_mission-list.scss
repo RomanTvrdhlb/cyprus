@@ -1,0 +1,59 @@
+.mission-list{
+    background: rgba(var(--bg-d),1.0);
+    border-radius: 16px 0;
+    overflow: hidden;
+
+    &__title{
+        font-family: var(--font-family2);
+    }
+
+    &__row{
+        display: grid;
+        @include for-small-tablet{
+            grid-template-columns: repeat(3, 1fr);
+            min-height: clamp(280px, 33.3333vw, 370px);
+        }
+
+        &--mode{
+            @include for-small-tablet{
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image{
+        display: flex;
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+
+        @include small-tablet{
+            max-height: clamp(320px, 54.688vw, 420px);
+        }
+
+        &--mode{
+            @include small-tablet{
+                img,picture{
+                    object-position: bottom center;
+                }
+            }
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+        justify-content: center;
+        padding: 32px;
+
+        @include small-tablet{
+            min-height: 190px;
+        }
+    }
+}

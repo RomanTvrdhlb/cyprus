@@ -1,0 +1,26 @@
+.comand-form{
+    
+    &__title{
+        font-family: var(--font-family2);
+    }
+
+    &__top{
+        margin-bottom: clamp(16px, 2.8829vw, 32px);
+        display: flex;
+        flex-direction: column;
+
+        @include for-small-tablet{
+            grid-gap: 24px;
+        }
+
+        @include small-tablet{
+            grid-gap: 32px;
+        }
+    }
+
+    .main-btn{
+        width: 100%;
+        max-width: 450px;
+        align-self: center;
+    }
+}

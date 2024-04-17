@@ -1,0 +1,23 @@
+.comand-list{
+    display: grid;
+    grid-gap: 24px 30px;
+    height: fit-content;
+    width: fit-content;
+
+    @include tablet{
+        justify-self: center;
+    }
+
+    @include small-tablet{
+        grid-gap: 56px 30px;
+    }
+
+    @include for-mobile{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile{
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+} 
