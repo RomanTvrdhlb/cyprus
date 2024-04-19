@@ -4,6 +4,7 @@ import './components/modals';
 import './components/global';
 // import './components/burger';
 import './components/select';
+import './components/fancybox';
 // import './components/quiz';
 
 
