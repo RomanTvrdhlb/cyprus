@@ -98,7 +98,7 @@
   }
 
   &--mode{
-    padding:0 0 clamp(150px, 22.7405vw, 312px);
+    padding-bottom: 0 clamp(150px, 22.7405vw, 312px);
     .images-list{
       @include tablet{
         @media (min-width: (900px)){
