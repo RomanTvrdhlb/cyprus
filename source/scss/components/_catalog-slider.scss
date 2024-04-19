@@ -1,25 +1,98 @@
 .catalog-slider{
-
+    position: relative;
     
-    .swiper-slide{
-      
+    
+    
+    &__image{
+        display: flex;
+
         img,picture{
+            border-radius: 20px;
             width: 100%;
         }
     }
 
 
     &__btn{
-        width: 10px;
-        height: 10px;
-        background-color: red;
+        position: absolute;
+        bottom: calc(clamp(67px, 9.6939vw, 133px) / 2);
+        transform: translateY(50%);
+        z-index: 5;
+        width: 37px;
+        height: 37px;
+        background-color: rgba(var(--bg-f),1.0);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+
+        &::before{
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='19' fill='none'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='m8 17.75-6.4304-6.5859c-.7595-.7777-.7595-2.0505 0-2.8282L8 1.75'/%3E%3C/svg%3E");
+            background-size: contain;
+            width: 9px;
+            height: 19px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:hover{
+            transform: scale(1.05) translateY(50%);
+        }
     }
 
-    .swiper-button-next{
-        background-color: green;
+    .swiper-button{
+        &-next{
+            right: 0;
+            
+            &::before{
+                transform: scaleX(-1);
+            }
+        }
+
+        &-prev{
+            left: 0;
+        }
     }
 }
 
-.sub-slider__slide{
-    width: 230px;
+.sub-slider{
+    &__container{
+        border-radius: 14px;
+        position: relative;
+        margin:clamp(15px, 1.3848vw, 19px) 22px 0;
+
+        &::before, &::after{
+            position: absolute;
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='198' height='133' fill='none'%3E%3Cpath fill='url(%23paint0_linear_121_2742)' fill-opacity='0.9' d='M0 0h198v133H0z' transform='matrix(-1 0 0 1 198 0)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_121_2742' x1='0' x2='198' y1='80.1773' y2='80.1773' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23fff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23fff'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat-y;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+            width:clamp(95px, 19.336vw, 198px);
+        }
+
+        &::before{
+            left: 0;
+        }
+
+        &:after{
+            right: 0;
+            transform: scaleX(-1);
+        }
+    }
+    
+    &__image{
+        height: clamp(67px, 12.988vw, 133px);
+
+        img,picture{
+            border-radius: 14px;
+            height: 100%;
+            width: 100%;
+        }
+    }
 }
