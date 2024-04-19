@@ -61,4 +61,32 @@
       padding: 0 10px;
     }
   }
+
+
+  &--villas{
+    margin-bottom: clamp(90px, 9.4752vw, 130px);
+
+    .first-section{
+
+      &__bg{
+        img,picture{
+          object-position: bottom;
+        }
+      }
+
+      &__box{
+        padding: clamp(148px, 16.1808vw, 222px) 0 101px;
+
+        @include mobile{
+          padding-bottom: 287px;
+        }
+      }
+
+      &__title{
+        color: rgba(var(--cl-a),1.0);
+        max-width: clamp(359px, 46.3557vw, 636px);
+        line-height: 123%;
+      }
+    }
+  }
 }

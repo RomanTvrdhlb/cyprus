@@ -96,4 +96,62 @@
   &__btn {
     padding: 0 74px;
   }
+
+  &--mode{
+    padding:0 0 clamp(150px, 22.7405vw, 312px);
+    .images-list{
+      @include tablet{
+        @media (min-width: (900px)){
+          transform: translate(-45%, -50%);
+        }
+      }
+    }
+
+    .faq-section{
+      &__box{
+        @include for-small-tablet{
+          grid-template-columns: 1fr clamp(350px, 43.3673vw, 595px);
+        }
+      }
+
+      &__title{
+        @include mobile{
+          max-width: clamp(350px, 43.3673vw, 595px);
+        }
+      }
+
+      &__text{        
+        @include for-small-tablet{
+          max-width: 438px;
+        }
+        @include small-tablet{
+          @include for-mobile{
+            max-width: 100%;
+          }
+        }
+        @include mobile{
+          max-width: clamp(350px, 43.3673vw, 595px);
+        }
+      }
+
+      &__inner{
+        width: 100%;
+
+        @include for-mobile{
+          max-width: clamp(350px, 43.3673vw, 595px);
+        }
+      }
+
+      &__btn{
+        padding: 0 25px;
+        width: 100%;
+        @include mobile{
+          max-width: 100%;
+        }
+        @include for-mobile{
+          max-width: 350px;
+        }
+      }
+    }
+  }
 }

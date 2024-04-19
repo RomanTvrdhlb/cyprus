@@ -8,7 +8,8 @@ const closeSelect = function (selectBody, select , className = "active") {
 };
 
 const openSelect = function (selectBody, select , className = "active") {
-  selectBody.style.height = selectBody.scrollHeight + "px";
+  // selectBody.style.height = selectBody.scrollHeight + "px";
+  selectBody.style.height = "94px";
   addCustomClass(select, className);
 };
 
@@ -38,10 +39,6 @@ if (select.length) {
         e.preventDefault();
       }
 
-      // if (item.classList.contains('cabinet-nav__select')) {
-      //   disableScroll();
-      // }
-
       const isSelectOpen = checkIsSelectOpen(item);
       const el = e.target.dataset.type;
       const innerSelect = e.target.innerHTML;
@@ -52,15 +49,24 @@ if (select.length) {
         selectCurrent.innerHTML = innerSelect;
         selectInput.setAttribute("value", e.target.getAttribute("data-id"));
         selectCurrent.setAttribute("data-id", e.target.getAttribute("data-id"));
-
-        // if (item.classList.contains('cabinet-nav__select')) {
-        //   enableScroll();
-        // }
       }
 
+      items.forEach(function (item) {item.style.display = "flex"});
+      currentItem.style.display = "none";
+    
+      if(currentItem.getAttribute('data-id') === '1'){
+        currentItem.nextElementSibling.style.paddingTop = '0';
+      }
+      if(currentItem.getAttribute('data-id') !== '1'){
+        items.forEach(function (item) {
+          if (item.getAttribute('data-id') === '1') {
+            item.style.paddingTop = '0px';
+          } else {
+            item.style.paddingTop = '10px';
+          } 
+        }
+    )}
 
-      // items.forEach(function (item) {item.style.display = "flex"});
-      // currentItem.style.display = "none";
       if (isSelectOpen) {
         closeSelect(selectBody, item);
       } else {
@@ -72,10 +78,6 @@ if (select.length) {
     document.addEventListener("click", function (event) {
       if (!item.contains(event.target) && checkIsSelectOpen(item)) {
         closeSelect(selectBody, item);
-
-        // if (item.classList.contains('cabinet-nav__select')) {
-        //   enableScroll();
-        // }
       }
     });
   });

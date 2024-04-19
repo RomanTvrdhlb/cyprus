@@ -1,92 +1,260 @@
 .modal {
     background: rgba(var(--bg-a),1.0);
-    max-width: 753px;
+    max-width: 762px;
     width: 90vw;
-    padding: 24px;
-    border-radius: 16px 0;
+    padding: 43px clamp(20px, 3.0612vw, 42px) clamp(31px, 3.4985vw, 48px);
     position: relative;
-    
+    border-radius: 20px;
+    box-shadow: 10px -16px 34px 0 rgba(0, 0, 0, 0.25);
 
-    &__inner {
-      display: flex;
-      flex-direction: column;
-      grid-gap: 8px;
-      align-items: center;
-    }
 
-    &__icon{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
     &__box{
       display: flex;
       flex-direction: column;
-      grid-gap: 24px;
+      grid-gap: 29px;
       width: 100%;
     }
 
     &__title{
-      font-family: var(--font-family2);
-      line-height: 150%;
-      text-align: center;
-    }
+      margin-bottom: 15px;
+      font-size: clamp(20px, 2.1866vw, 30px);
 
-    p{
-      text-align: center;
+      br{
+        &.mode{
+          @include mobile{
+            display: none;
+          }
+        }
+        &.mob{
+          @include for-mobile{
+            display: none;
+          }
+        }
+      }
     }
 
     .main-btn{
+      align-self: center;
       width: 100%;
-      margin-top: 32px;
+      max-width: 366px;
     }
 
     &__close{
       position: absolute;
-      top: 24px;
-      right: 24px;
-      color: rgba(var(--cl-d),1.0);
+      top: 25px;
+      right: 26px;
+      transition: all .3s;
 
-      
+      svg{
+        fill: none;
+      }
+
     &:hover{
-      color: rgba(var(--cl-d),.7);
+      transform: scale(1.1);
     }
     }
 
-    &.success{
-      max-width: clamp(350px, 34.6847vw, 385px);
+    &__content{
+      display: flex;
+      grid-gap: 34px clamp(20px, 3.1341vw, 43px);
+
+      @include small-tablet{
+        flex-direction: column;
+      }
     }
 
-    &.more{
-      max-width: clamp(350px, 40.5405vw, 450px);
-      padding: 40px 32px;
+    &__image{
+      width: 100%;
+      flex-shrink: 0;
 
-      .modal{
-        &__icon{
-          max-height: 257px;
-          width: 100%;
-      
-          img,picture{
-            border-radius: 16px 0;
-            max-width: clamp(220px, 27.027vw, 300px);
-            width: 100%;
-            height: 100%;
+      img,picture{
+        width: 100%;
+        height: 100%;
+      }
+
+      @include for-tablet{
+        max-width: Min(37.2vw, 558px);
+        max-height: Min(46.533vw, 698px);
+        height: 100%;
+      }
+      @include tablet{
+        @include for-small-tablet{
+        width: 206px;
+        height: 290px;
+        }
+      }
+
+      @include for-small-tablet{
+        margin-top: 13px;
+      }
+    }
+
+    &.contact{
+      padding: clamp(43px, 3.863vw, 53px) clamp(20px, 3.207vw, 44px) 50px;
+      max-width: 1366px;
+
+
+      .contacts{
+        padding-top: clamp(6px, 1.4577vw, 20px);
+        margin-bottom: 2px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 2.551vw, 35px);
+
+        li{
+          &:first-child{
+            a{
+              svg{
+                transform: translateY(-20%);
+              }
+
+              &:hover{
+                svg{
+                    transform: scale(1.05) translateY(-20%);
+                }
+              }
+            }
+            
+            
+            
           }
+        }
+
+        a{
+          font-size: clamp(18px, 1.8222vw, 25px);
+          position: relative;
+          padding-left: calc(clamp(40px, 5.0292vw, 69px) + 10px);
+          height: clamp(40px, 5.0292vw, 69px);
+
+        
+
+          @include for-small-tablet{
+            font-weight: 500;
+          }
+
+          @include small-tablet{
+            font-weight: 600;
+          }
+
+          svg{
+            flex-shrink: 0;
+            width: clamp(40px, 5.0292vw, 69px);
+            height: clamp(40px, 5.0292vw, 69px);
+            fill: none;
+            transition: all .2s;
+            position: absolute;
+            left: 0;
+
+            @include for-desktop{
+              transform: translateY(-35%);
+            }
+
+            @include desktop{
+              transform: translateY(-30%);
+            }
+          }
+
+          &:hover{
+            svg{
+              @include for-desktop{
+                transform: scale(1.05) translateY(-35%);
+              }
+  
+              @include desktop{
+                transform: scale(1.05) translateY(-30%);
+              }
+            }
+          }
+        }
+
+        @include small-tablet{
+          order: 2;
+          margin-bottom: 5px;
+        }
+      }
+
+      .socials{
+        ul{
+          grid-gap: clamp(19px, 1.5306vw, 21px);
+        }
+
+        a{
+          svg{
+            flex-shrink: 0;
+            width: clamp(40px, 5.0292vw, 69px);
+            height: clamp(40px, 5.0292vw, 69px);
+            transition: all .2s;
+          }
+
+          &:hover{
+            svg{
+              transform: scale(1.05);
+            }
+          }
+        }
+
+        @include small-tablet{
+          order: 3;
+        }
+      }
+
+      .main-form{
+        &__label{
+          &:last-child{
+            grid-column: initial;
+          }
+        }
+
+        @include for-small-tablet{
+          margin-top: 52px;
+        }
+
+        @include small-tablet{
+          order: 5;
+          margin-top: 24px;
         }
       }
 
       .main-btn{
-        margin-top: 15px;
+        align-self: flex-start;
+
+        @include small-tablet{
+          order: 6;
+          margin-top: -13px;
+        }
       }
-    }
 
-    &.call{
-      max-width: clamp(350px, 49.55vw, 550px);
-      padding: 32px clamp(20px, 3.4188vw, 40px) 32px;
+      .modal{
 
-      .main-btn{
-        margin-top: 15px;
+        &__box{
+          grid-gap: 33px;
+
+          @include small-tablet{
+            display: contents;
+          }
+        }
+
+        &__image{
+          @include small-tablet{
+            order: 4;
+            height: 100%;
+            max-height: clamp(293px, 45.573vw, 350px);
+
+            img,picture{
+              object-position: bottom;
+            }
+          }
+        }
+
+        &__title{
+          margin: 0;
+
+          @include small-tablet{
+            order: 1;
+            margin-bottom: 4px;
+          }
+        }
       }
     }
   }

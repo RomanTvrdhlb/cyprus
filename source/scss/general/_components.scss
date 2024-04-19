@@ -1,18 +1,8 @@
 // ----------------- MAIN COMPONENTS -----------------
-// @import "../components/main-components/main-social.scss";
-// @import "../components/main-components/services-list.scss";
-// @import "../components/main-components/main-rating.scss";
-// @import "../components/main-components/main-list.scss";
 // @import "../components/main-components/quiz.scss";
-// @import "../components/main-components/main-top.scss";
 // @import "../components/main-components/main-form.scss";
-// @import "../components/main-components/join.scss";
-// @import "../components/main-components/join-content.scss";
-// @import "../components/main-components/main-contact.scss";
-// @import "../components/main-components/comand-form.scss";
 // @import "../components/main-components/quiz-status.scss";
-// @import "../components/main-components/gallery-nav.scss";
-// @import "../components/main-components/main-gallery.scss";
+
 @import "../components/main-components/main-nav.scss";
 @import "../components/main-components/images-list.scss";
 @import "../components/cards/offer-card.scss";
@@ -22,32 +12,11 @@
 
 // ----------------- BLOCK COMPONENTS -----------------
 
-@import "../components/bar.scss";
-@import "../components/rating-slider.scss";
-@import "../components/about-slider.scss";
-@import "../components/areas-slider.scss";
-@import "../components/about-company.scss";
-@import "../components/areas-tabs.scss";
-@import "../components/callback.scss";
-
-@import "../components/choose-list.scss";
-@import "../components/mission-list.scss";
-@import "../components/program-list.scss";
-@import "../components/comand-list.scss";
-@import "../components/main-slider.scss";
-@import "../components/colors-slider.scss";
-@import "../components/steps-list.scss";
-@import "../components/colors-list.scss";
-@import "../components/quiz-list.scss";
-@import "../components/table-guide.scss";
-@import "../components/cards-slider.scss";
-@import "../components/choose-slider.scss";
-@import "../components/process-list.scss";
-@import "../components/gallery-slider.scss";
-
-
+// @import "../components/main-slider.scss";
+// @import "../components/quiz-list.scss";
 
 @import "../components/offers-list.scss";
+@import "../components/catalog-slider.scss";
 
 
 // ----------------- NEW -----------------
@@ -55,6 +24,7 @@
 @import "../components/contacts.scss";
 @import "../components/sales-list.scss";
 @import "../components/about-list.scss";
+@import "../components/main-form.scss";
 
 
 

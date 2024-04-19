@@ -1,0 +1,84 @@
+.main-form {
+  display: grid;
+
+  @include for-small-tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 33px 21px;
+  }
+
+  @include small-tablet {
+    grid-template-columns: 100%;
+    grid-gap: 33px;
+  }
+
+  &__label {
+    position: relative;
+    border-radius: 22px;
+    
+
+    @include for-small-tablet {
+      &:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    &--mode{
+   
+        border-radius: initial;
+
+        .main-form__subtitle{
+
+            @include mobile{
+                display: none;
+            }
+
+            &--mode{
+                @include for-mobile{
+                    display: none;
+                }
+                @include mobile{
+                    display: inline;
+                }
+            }
+        }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 26px;
+    transform: translateY(-60%);
+    z-index: 5;
+    &::before{
+        width: calc(100% + 16px);
+        left: -5px;
+        height: 105%;
+        background-color: rgba(var(--bg-a),1.0);
+        position: absolute;
+        content: '';
+        z-index: -1;
+    }
+  }
+
+  &__input {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 25px;
+    border: solid 2px rgba(11, 39, 49, 0.2);
+    border-radius: inherit;
+    padding: 17px 26px;
+
+    &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        color: rgba(11, 39, 49, 0.43);
+    }
+
+    &:focus-visible{
+        border-color: rgba(var(--bg-d),1.0);
+    }
+  }
+}

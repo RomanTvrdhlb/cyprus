@@ -1,0 +1,9 @@
+.catalog-section{
+    padding-bottom: clamp(150px, 21.793vw, 299px);
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 150px;
+    }
+}

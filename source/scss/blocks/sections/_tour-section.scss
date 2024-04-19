@@ -109,4 +109,37 @@
       padding: 0 10px;
     }
   }
+
+  &--villas{
+    margin-bottom: 0;
+    padding: 0;
+    overflow: initial;
+
+    .tour-section{
+
+      &__bg{
+        inset: 0;
+
+        img,picture{
+          object-position: bottom;
+        }
+      }
+
+      &__title{
+        max-width: clamp(380px, 62.0991vw, 852px);
+        margin: 0 0 16px;
+        display: inline;
+      }
+
+      &__box{
+        position: relative;
+        padding: clamp(44px, 10.4227vw, 143px) 0 clamp(150px, 13.1195vw, 180px);
+
+        @include mobile{
+          padding-bottom: 280px;
+        }
+      }
+
+    }
+  }
 }

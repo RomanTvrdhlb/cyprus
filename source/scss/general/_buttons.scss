@@ -41,5 +41,34 @@
       }
     }
   }
+
+  &--blue{
+    background: #7ac3ed;
+    position: relative;
+    z-index: 1;
+    
+
+    &::before{
+      position: absolute;
+      inset: 0;
+      content: '';
+      background: var(--gr-b);
+      z-index: -1;
+      border-radius: inherit;
+      pointer-events: none;
+      transition: all .4s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    
+    &:hover{
+      box-shadow: none;
+      &::before{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 

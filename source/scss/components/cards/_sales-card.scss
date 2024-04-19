@@ -1,75 +1,203 @@
-.sales-card{
+.sales-card {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(20px, 2.2595vw, 31px);
+
+  &__box {
     display: flex;
     flex-direction: column;
-    grid-gap: clamp(20px, 2.2595vw, 31px);
+    grid-gap: 24px;
+  }
 
-    &__box{
-        display: flex;
-        flex-direction: column;
-        grid-gap: 24px;
+  &__image {
+    @include small-tablet {
+      width: 100%;
+      display: flex;
+
+      img,
+      picture {
+        width: 100%;
+      }
     }
+  }
 
-    &__image{
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 0.7fr) 1fr;
+    grid-gap: 10px;
+
+    &--mode{
+       
+
+        @include for-small-tablet{
+          grid-gap: clamp(5px, 1.312vw, 18px);
+        }
+
         @include small-tablet{
-            width: 100%;
-            display: flex;
-
-            img,picture{
-                width: 100%;
-            }
-        }
-    }
-
-    &__list{
-        display: grid;
-        grid-template-columns: repeat(2, .7fr) 1fr;
-        grid-gap: 10px;
-    }
-
-    &__text{
-        color: rgba(var(--cl-b),1.0);
-        font-size: clamp(15px, 1.4577vw, 20px);
-        &.line{
-            text-decoration: line-through;
-        }
-    }
-
-    &__item{
-        display: flex;
-        grid-gap: clamp(9px, 1.0204vw, 14px);
-
-        p{
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    &__icon{
-        svg{
-            fill: none;
-        }
-    }
-
-    &__title{
-        .main-label{
-            top: 5px;
-            min-height: 42px;
-            min-width: 158px;
-
-            &__text{
-                padding: 0 14px;
-            }
-            @include for-mobile{
-                margin-left: 5px;
-            }
-            @include mobile{
-                top: -2px;
-            }
+          grid-gap: 18px;
+          margin-bottom: 7px;
         }
 
         @include mobile{
-            display: inline-flex;
-            flex-direction: column;
+          grid-template-columns: 100%;
+        }
+
+        @include for-mobile{
+          grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    &--default{
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 16px 18px;
+    }
+  }
+
+  &__row{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 18px;
+  }
+
+  &__text {
+    color: rgba(var(--cl-b), 1);
+    font-size: clamp(15px, 1.4577vw, 20px);
+
+    &.line {
+      text-decoration: line-through;
+    }
+
+    svg{
+        fill: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    grid-gap: clamp(9px, 1.0204vw, 14px);
+
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    svg {
+      fill: none;
+    }
+  }
+
+  &__title {
+    .main-label {
+      top: 5px;
+      min-height: 42px;
+      min-width: 158px;
+
+      &__text {
+        padding: 0 14px;
+      }
+      @include for-mobile {
+        margin-left: 5px;
+      }
+      @include mobile {
+        top: -2px;
+      }
+    }
+
+    @include mobile {
+      display: inline-flex;
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 19px;
+
+    .main-btn {
+      max-width: 329px;
+      width: 100%;
+      @include for-mobile {
+        margin-top: 11px;
+      }
+    }
+  }
+
+  &__titles{
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  }
+
+  &__subtitle{
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
+.villas-card {
+  grid-gap: clamp(35px, 3.6443vw, 50px);
+  .sales-card {
+    &__box{
+        grid-gap: clamp(35px, 3.4257vw, 47px);
+
+        @include small-tablet{
+          display: contents;
+        }
+    }
+
+    &__titles{
+      @include small-tablet{
+        order: -2;
+      }
+    }
+
+    &__wrapp{
+      @include small-tablet{
+        order: -1;
+        margin-bottom: 7px;
+      }
+    }
+
+    &__top {
+      display: grid;
+
+      @include for-small-tablet{
+        grid-template-columns: 50% 50%;
+        grid-gap: 19px;
+      }
+
+      @include small-tablet{
+        grid-template-columns: 100%;
+        grid-gap: 28px;
+      }
+    }
+
+    &__text{
+        display: inline-flex;
+        grid-gap: clamp(2px, .7289vw, 10px);
+        color: rgba(var(--cl-c),1.0);
+
+        @include for-small-tablet{
+          font-size: clamp(14px, 1.4577vw, 20px);
+        }
+        @include small-tablet{
+          font-size: clamp(15px, 1.4577vw, 20px);
+        }
+
+        svg{
+          position: relative;
+          top: 3px;
+          flex-shrink: 0;
+        }
+    }
+  }
 }

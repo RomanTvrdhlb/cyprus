@@ -94,5 +94,9 @@
       }
     }
   }
+
+  &--villas{
+    padding: clamp(135px, 15.5977vw, 214px) 0 clamp(37px, 3.207vw, 44px);
+  }
 }
 

@@ -20,7 +20,7 @@
           <div class="first-section__box">
             <h1 class="first-section__title">НЕДВИЖИМОСТЬ НА СЕВЕРНОМ КИПРЕ</h1>
             <p class="first-section__text text">Мы поможем с покупкой недвижимости: для жизни, отдыха, или инвестиций. Большой выбор апаратментов от комфортных студий, до роскошных вилл.</p>
-            <button class="first-section__btn main-btn">Получить подборку</button>
+            <button data-btn-modal="access" class="first-section__btn main-btn">Получить подборку</button>
 
             <ul class="main-nav">
               <li class="main-nav__item">
@@ -200,7 +200,7 @@
                       </li>
                     </ul>
 
-                    <button class="offer-card__btn main-btn">Смотреть виллы</button>
+                    <button data-btn-modal="zoom" class="offer-card__btn main-btn">Смотреть виллы</button>
                   </div>
                 </div>
               </li>
@@ -266,7 +266,7 @@
                       </li>
                     </ul>
 
-                    <button class="offer-card__btn main-btn">Выбрать студию</button>
+                    <button data-btn-modal="sign" class="offer-card__btn main-btn">Выбрать студию</button>
                   </div>
                 </div>
               </li>
@@ -338,7 +338,7 @@
                       </li>
                     </ul>
 
-                    <button class="offer-card__btn main-btn">Выбрать квартиру</button>
+                    <button data-btn-modal="consultation" class="offer-card__btn main-btn">Выбрать квартиру</button>
                   </div>
                 </div>
               </li>
@@ -1071,7 +1071,7 @@
     </main>
 
     @include('partials/footer.html')
-    <!-- @include('partials/modals.html') -->
+    @include('partials/modals.html')
   </div>
 </body>
 
