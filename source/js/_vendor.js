@@ -1,4 +1,4 @@
-import './vendor/focus-visible.js';
+// import './vendor/focus-visible.js';
 // import './vendor/picturefill.js';
 import './vendor/player.js';
 import './vendor/lightbox.js';

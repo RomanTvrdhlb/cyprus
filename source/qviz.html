@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/header-mode.html')
+
+    <main>
+      <section class="quiz-section" data-quiz>
+        <div class="quiz-section__bg">
+          <picture>
+            <source type='image/webp' srcset='img/qviz/bg.webp'>
+            <img width='1512' height='615' src='img/qviz/bg.png' alt='image'>
+          </picture>
+        </div>
+        <div class="container">
+          <div class="quiz-section__content">
+            <form class="quiz-section__box form-quiz">
+              <span class="quiz-section__info"><i class="quiz-section__current">1</i> / <i class="quiz-section__all"></i></span>
+              <ul class="quiz-list">
+                <li class="quiz-list__item active">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №1</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">Для каких целей вы подбираете недвижимость?</span>
+                      <ul class="quiz__list">
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Для каких целей вы подбираете недвижимость?" value="Для жизни" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Для жизни</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Для каких целей вы подбираете недвижимость?" value="Для инвестиций" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Для инвестиций</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Для каких целей вы подбираете недвижимость?" value="Для отдыха (дача у моря)" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Для отдыха (дача у моря)</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz apart-slide">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №2</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">Какой тип объекта вас интересует?</span>
+                      <ul class="quiz__list quiz__list--mode">
+                        <li class="quiz__item">
+                          <label class="custom-checkbox">
+                            <input type="radio" id="apart_1" name="Какой тип объекта вас интересует?" value="Апартаменты" class="custom-checkbox__field">
+                            <div class="custom-checkbox__image">
+                              <picture>
+                                <img width='210' height='210' src='img/qviz/slide1.jpg' alt='image'>
+                              </picture>
+                            </div>
+                            <span class="quiz-checkbox__content">Апартаменты</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="custom-checkbox">
+                            <input type="radio" id="apart_2" name="Какой тип объекта вас интересует?" value="Вилла" class="custom-checkbox__field">
+                            <div class="custom-checkbox__image">
+                              <picture>
+                                <img width='210' height='210' src='img/qviz/slide2.jpg' alt='image'>
+                              </picture>
+                            </div>
+                            <span class="quiz-checkbox__content">Вилла</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="custom-checkbox">
+                            <input type="radio" id="apart_3" name="Какой тип объекта вас интересует?" value="Таунхаус" class="custom-checkbox__field">
+                            <div class="custom-checkbox__image">
+                              <picture>
+                                <img width='210' height='210' src='img/qviz/slide3.jpg' alt='image'>
+                              </picture>
+                            </div>
+                            <span class="quiz-checkbox__content">Таунхаус</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="custom-checkbox">
+                            <input type="radio" id="apart_4" name="Какой тип объекта вас интересует?" value="Коммерческая недвижимость" class="custom-checkbox__field">
+                            <div class="custom-checkbox__image">
+                              <picture>
+                                <img width='210' height='210' src='img/qviz/slide1.jpg' alt='image'>
+                              </picture>
+                            </div>
+                            <span class="quiz-checkbox__content">Коммерческая недвижимость</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №3</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">В каком регионе Кипра вы хотели бы приобрести недвижимость?</span>
+                      <ul class="quiz__list">
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="В каком регионе Кипра вы хотели бы приобрести недвижимость?" value="Не знаю" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Не знаю</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="В каком регионе Кипра вы хотели бы приобрести недвижимость?" value="Фамагуста" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Фамагуста</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="В каком регионе Кипра вы хотели бы приобрести недвижимость?" value="Искеле" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Искеле</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="В каком регионе Кипра вы хотели бы приобрести недвижимость?" value="Кирения" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Кирения</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="В каком регионе Кипра вы хотели бы приобрести недвижимость?" value="Карпаз" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Карпаз</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="В каком регионе Кипра вы хотели бы приобрести недвижимость?" value="Гирне" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Гирне</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №4</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">Что для вас наиболее важно при выборе недвижимости?</span>
+                      <p>Выберите один или несколько вариантов ответа</p>
+                      <ul class="quiz__list">
+                        <li class="quiz__item">
+                          <label class="main-checkbox">
+                            <input type="checkbox" name="Что для вас наиболее важно при выборе недвижимости?" value="Море в пешей доступности" class="main-checkbox__field">
+                            <span class="main-checkbox__content">Море в пешей доступности</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="main-checkbox">
+                            <input type="checkbox"  name="Что для вас наиболее важно при выборе недвижимости?" value="Вид на горы" class="main-checkbox__field">
+                            <span class="main-checkbox__content">Вид на горы</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="main-checkbox">
+                            <input type="checkbox" name="Что для вас наиболее важно при выборе недвижимости?" value="Центр города" class="main-checkbox__field">
+                            <span class="main-checkbox__content">Центр города</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="main-checkbox">
+                            <input type="checkbox" name="Что для вас наиболее важно при выборе недвижимости?" value="Бассейн" class="main-checkbox__field">
+                            <span class="main-checkbox__content">Бассейн</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="main-checkbox">
+                            <input type="checkbox" name="Что для вас наиболее важно при выборе недвижимости?" value="Тихий район" class="main-checkbox__field">
+                            <span class="main-checkbox__content">Тихий район</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="main-checkbox">
+                            <input type="checkbox" name="Что для вас наиболее важно при выборе недвижимости?" value="Инфраструктура для жизни всей семьей" class="main-checkbox__field">
+                            <span class="main-checkbox__content">Инфраструктура для жизни всей семьей</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №5</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">Какую сумму вы планируете инвестировать в недвижимость на Кипре?</span>
+                      <ul class="quiz__list" data-apart></ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №6</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">Специальные условия покупки для Вас:</span>
+                      <ul class="quiz__list">
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Специальные условия покупки для Вас:" value="Беcпроцентная рассрочка на максимальный срок, до 5 лет" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Беcпроцентная рассрочка на максимальный срок, до 5 лет</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Специальные условия покупки для Вас:" value="Минимальный первый взнос (от 30%)" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Минимальный первый взнос (от 30%)</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Специальные условия покупки для Вас:" value="Оплата наличными" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Оплата наличными</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Специальные условия покупки для Вас:" value="Оплата криптовалютой" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Оплата криптовалютой</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Специальные условия покупки для Вас:" value="Выплата рассрочки за счет сдачи недвижимости в аренду" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Выплата рассрочки за счет сдачи недвижимости в аренду</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title title">Вопрос №7</span>
+                    </div>
+                    <div class="quiz__box">
+                      <span class="quiz__subtitle">Укажите, когда вы планируете приобрести недвижимость?</span>
+                      <ul class="quiz__list">
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Укажите, когда вы планируете приобрести недвижимость?" value="Срочно" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">Срочно</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Укажите, когда вы планируете приобрести недвижимость?" value="3 - 6 месяцев" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">3 - 6 месяцев</span>
+                          </label>
+                        </li>
+                        <li class="quiz__item">
+                          <label class="quiz-checkbox">
+                            <input type="radio" name="Укажите, когда вы планируете приобрести недвижимость?" value="1 год" class="quiz-checkbox__field">
+                            <span class="quiz-checkbox__content">1 год</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="quiz-list__item">
+                  <div class="quiz">
+                    <div class="quiz__top">
+                      <span class="quiz__title quiz__title--mode title">Подборка почти готова</span>
+                    </div>
+                    <div class="quiz__box quiz__box--mode">
+                      <span class="quiz__subtitle">Вы получите ее через пару минут. Заполните форму, куда отправить варианты</span>
+                      
+                      <div class="main-form">
+                        <label for="quiz_name" class="main-form__label">
+                            <span class="main-form__subtitle">Ваше имя</span>
+                            <input type="text" id="quiz_name" name="Имя" class="main-form__input input-name" placeholder="Имя...">
+                        </label>
+                        <label for="quiz_phone" class="main-form__label">
+                          <span class="main-form__subtitle">Телефон</span>
+                          <input type="tel" id="quiz_phone" name="Телефон" class="main-form__input input-phone" placeholder="+380...">
+                        </label>
+                        <div class="main-form__label main-form__label--mode">
+                          <span class="main-form__subtitle">Мессенжер для связи</span>
+                          <span class="main-form__subtitle main-form__subtitle--mode">Мессенжер</span>
+                          
+                          <div class="select" data-select>
+                            <div class="select__header">
+                              <input type="hidden" class="select__input input-select" name="Мессенжер для связи" value="1">
+                              <span class="select__current" data-id="1">
+                                <svg width='21' height='20'>
+                                  <use href='img/sprite/sprite.svg#whatsapp'></use>
+                                </svg>
+                                Whatsapp
+                                </span>
+                              <svg class="select__current-icon" width='15' height='7'>
+                                <use href='img/sprite/sprite.svg#triangle'></use>
+                              </svg>
+                            </div>
+                            <div class="select__body">
+                              <ul class="select__list">
+                                <li class="select__option" data-id="1" data-type="option">
+                                  <svg width='22' height='24'>
+                                    <use href='img/sprite/sprite.svg#whatsapp'></use>
+                                  </svg>
+                                  Whatsapp
+                                </li>
+                                <li class="select__option" data-id="2" data-type="option">
+                                  <svg width='21' height='20'>
+                                    <use href='img/sprite/sprite.svg#tg'></use>
+                                  </svg>
+                                  Телеграм
+                                </li>
+                                <li class="select__option" data-id="3" data-type="option">
+                                  <svg width='22' height='24'>
+                                    <use href='img/sprite/sprite.svg#viber2'></use>
+                                  </svg>
+                                  Viber
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+              
+                        </div>
+                        <label for="quiz_mail" class="main-form__label">
+                          <span class="main-form__subtitle">E-mail</span>
+                          <input type="text" id="quiz_mail" name="E-mail" class="main-form__input input-mail" placeholder="e-mail...">
+                        </label>
+                    </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              
+              <div class="quiz-section__bottom">
+                <button type="button" class="main-btn main-btn--blue" data-prev>Назад
+                  <span></span>
+                </button>
+                <button type="button" class="main-btn" data-next>Далее
+                  <span></span>
+                </button>
+                <button class="main-btn hide">Отправить
+                  <span></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modals.html')
+  </div>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

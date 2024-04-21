@@ -12,14 +12,12 @@
     align-items: center;
     gap: clamp(40px, 3.6443vw, 50px);
     color: rgba(var(--cl-a),1.0);
+  }
 
-    // @include for-small-tablet{
-    //   grid-gap: 29px;
-    // }
-
-    // @include small-tablet{
-    //   grid-gap: 37px;
-    // }
+  &__box{
+    &-text{
+      white-space: nowrap;
+    }
   }
 
   &__top {
@@ -49,10 +47,6 @@
       margin-bottom: 17px;
     }
   }
-
-  // &__text {
-  //   color: rgba(var(--cl-a),1.0);
-  // }
 
   .contacts{
     width: fit-content;

@@ -35,10 +35,6 @@
       order: -2;
       margin-bottom: 65px;
     }
-
-    // @include mobile{
-    //     display: inline-flex;
-    // }
   }
 
   &__box {
@@ -66,6 +62,12 @@
     img,
     picture {
       border-radius: 30px;
+    }
+
+    &--mode{
+      img,picture{
+        width: clamp(229px, 36.0886vw, 489px);
+      }
     }
 
     &--small {
@@ -172,10 +174,30 @@
     }
   }
 
+  &__btn{
+    max-width: 303px;
+    width: 100%;
+
+    &--mode{
+      max-width: 366px;
+    }
+
+    @include mobile{
+      max-width: 100%;
+    }
+  }
+
+  &--two{
+    @include for-tablet{
+      margin-top: -60px;
+    }
+  }
+
   &--one {
     @include for-tablet {
       grid-template-columns: clamp(426px, 55.972vw, 806px) 1fr;
       grid-gap: clamp(20px, 1.6035vw, 22px);
+      margin-top: 25px;
     }
 
     .offers-card__top{
@@ -191,6 +213,14 @@
 
       @include mobile{
         width: 169px;
+      }
+    }
+  }
+
+  &--stydies {
+    .offers-card__image--small {
+      @include mobile{
+        width: 191px;
       }
     }
   }

@@ -23,11 +23,11 @@
     }
 
     &--mode{
-   
+      
         border-radius: initial;
 
         .main-form__subtitle{
-
+          z-index: 10;
             @include mobile{
                 display: none;
             }
@@ -79,6 +79,10 @@
 
     &:focus-visible{
         border-color: rgba(var(--bg-d),1.0);
+    }
+
+    &.just-validate-error-field{
+      border-color: red;
     }
   }
 }

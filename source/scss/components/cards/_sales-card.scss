@@ -141,6 +141,13 @@
     font-weight: 500;
     font-size: 25px;
   }
+
+  .main-btn{
+    @include mobile{
+      max-width: 100%;
+    }
+  }
+
 }
 
 .villas-card {
@@ -178,6 +185,14 @@
       @include small-tablet{
         grid-template-columns: 100%;
         grid-gap: 28px;
+      }
+    }
+
+    &__list{
+      &--mode{
+        .sales-card__text{
+          grid-gap: 10px;
+        }
       }
     }
 

@@ -3,7 +3,7 @@
     flex-direction: column;
 
     @include for-tablet{
-        grid-gap: 261px;
+        grid-gap: 225px;
     }
 
     @include tablet{

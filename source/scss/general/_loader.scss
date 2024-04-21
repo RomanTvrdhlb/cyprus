@@ -1,3 +1,12 @@
+@keyframes rotate360 {
+	from {
+	  transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+	  transform: translate(-50%, -50%) rotate(360deg);
+	}
+  }
+
 .loader {
 	position: relative;
 
@@ -16,39 +25,27 @@
 		display: flex;
 		pointer-events: none;
 		transition: all .3s ease;
-		z-index: 10;
+		z-index: 20;
 	}
 
 	&:before {
-		inset: 0;
-		background-color: rgba(var(--bg-f),1.0);
+		inset: -15px -5px;
+		background-color: rgba(var(--bg-a),.7);
+		backdrop-filter: blur(1px);
 	}
 
 	&:after {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: clamp(120px, 16.667vw, 200rem);
-		height: clamp(120px, 16.667vw, 200rem);
+		height: 60%;
+		max-height: 150px;
+		aspect-ratio: 1;
 		border-radius: 50%;
-		border: clamp(15px, 2.5vw, 30rem) solid rgba(var(--bg-a),1.0);
+		border: 15px solid rgba(var(--bg-d),1.0);
 		border-top-color: transparent;
 		animation: rotate360 1.5s ease-in-out infinite;
-		z-index: 11;
+		z-index: 21;
 		transition-property: transform;
-	}
-}
-
-.preloader {
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 200;
-	inset: 0;
-	background-color: #2b2a28;
-
-	&__icon {
-		max-width: Max(300px, 300rem);
 	}
 }

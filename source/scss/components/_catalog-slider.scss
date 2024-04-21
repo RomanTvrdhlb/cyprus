@@ -1,14 +1,37 @@
 .catalog-slider{
     position: relative;
     
-    
-    
     &__image{
         display: flex;
 
         img,picture{
             border-radius: 20px;
             width: 100%;
+        }
+
+        iframe{
+            width: 100%;
+            border-radius: 20px;
+
+            @include for-small-tablet{
+                height: Min(27.9705vw, 379px);
+            }
+
+            @include small-tablet{
+                @include for-mobile{
+                    height: Min(52.995vw, 407px);
+                }
+            }
+
+            @include mobile{
+                @include for-ios{
+                    height: Min(52.252vw, 300.97px);
+                }
+            }
+
+            @include ios{
+                height: Min(51.046vw, 211px);
+            }
         }
     }
 
@@ -61,6 +84,11 @@
 
     &__slide{
         cursor: pointer;
+
+        &.swiper-slide-active{
+            border-radius: 16px;
+            border: solid 2px rgba(var(--bg-d),1.0);
+        }
     }
 
     &__container{

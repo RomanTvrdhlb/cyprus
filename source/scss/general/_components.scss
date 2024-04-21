@@ -1,5 +1,5 @@
 // ----------------- MAIN COMPONENTS -----------------
-// @import "../components/main-components/quiz.scss";
+@import "../components/main-components/quiz.scss";
 // @import "../components/main-components/main-form.scss";
 // @import "../components/main-components/quiz-status.scss";
 
@@ -13,8 +13,7 @@
 // ----------------- BLOCK COMPONENTS -----------------
 
 // @import "../components/main-slider.scss";
-// @import "../components/quiz-list.scss";
-
+@import "../components/quiz-list.scss";
 @import "../components/offers-list.scss";
 @import "../components/catalog-slider.scss";
 

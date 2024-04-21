@@ -5,7 +5,8 @@ import './components/global';
 // import './components/burger';
 import './components/select';
 import './components/fancybox';
-// import './components/quiz';
+import './components/quiz';
+import './components/validate';
 
 
 

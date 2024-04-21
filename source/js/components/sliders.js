@@ -440,6 +440,15 @@ parentSliders &&
       observer: true,
       observeParents: true,
       slideToClickedSlide: true,
+
+      breakpoints:{
+        320:{
+          spaceBetween: 10,
+        },
+        576:{
+          spaceBetween: 20,
+        },
+      }
     });
 
     const mainSlider = new Swiper(mainSwiper, {
@@ -458,5 +467,14 @@ parentSliders &&
         nextEl: mainSliderNext && mainSliderNext,
         prevEl: mainSliderPrev && mainSliderPrev,
       },
+
+      breakpoints:{
+        320:{
+          spaceBetween: 10,
+        },
+        576:{
+          spaceBetween: 20,
+        },
+      }
     });
   });

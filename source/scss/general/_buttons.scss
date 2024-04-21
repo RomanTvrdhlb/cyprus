@@ -11,7 +11,7 @@
   color: rgba(var(--cl-a),1.0);
   border-radius: 50px;
   background: var(--gr-a);
-  transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out !important;
   font-family: var(--font-family);
 
   &:hover {
@@ -43,7 +43,7 @@
   }
 
   &--blue{
-    background: #7ac3ed;
+    background: rgba(var(--bg-g),1.0);
     position: relative;
     z-index: 1;
     
@@ -69,6 +69,16 @@
         visibility: visible;
       }
     }
+  }
+
+
+  &--disable{
+    opacity: .5 !important;
+    pointer-events: none;
+  }
+
+  &.hide{
+    display: none;
   }
 }
 

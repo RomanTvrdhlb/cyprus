@@ -58,6 +58,10 @@
           @include small-tablet{
             justify-content: flex-end;
           }
+
+          @include for-small-tablet{
+            padding-right: Min(9.3727vw, 127px);
+          }
         }
       }
 
@@ -95,6 +99,10 @@
 
   &__btn {
     padding: 0 74px;
+
+    @include mobile{
+      width: 100%;
+    }
   }
 
   &--mode{

@@ -8,6 +8,31 @@
     border-radius: clamp(40px, 5.102vw, 70px);
     padding: clamp(23px, 2.4781vw, 34px)  clamp(21px, 3.4257vw, 47px);
     width: 100%;
+
+    @media (min-width: (1400px)) {
+        --gap:Min(6.95vw, 105px);
+    }
+
+    @media (min-width: (1350px)) and (max-width: (1400px)) {
+        --gap:Min(6.071vw, 85px);
+    }
+
+    @media (min-width: (1300px)) and (max-width: (1350px)) {
+        --gap:Min(5.185vw, 70px);
+    }
+
+    @media (min-width: (1175px)) and (max-width: (1300px)) {
+        --gap:Min(4.615vw, 60px);
+    }
+
+    @media (min-width: (1110px)) and (max-width: (1175px)) {
+        --gap:Min(3.404vw, 40px);
+    }
+
+    @media (min-width: (1024px)) and (max-width: (1110px)) {
+        --gap:Min(1.818vw, 20px);
+    }
+
     
     @include for-laptop{
         padding: clamp(23px, 2.4781vw, 34px)  clamp(21px, 3.4257vw, 47px);
@@ -18,13 +43,12 @@
     }
 
     @include for-tablet{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         right: 0;
         transform: translateY(50%);
         left: 0;
-        grid-gap: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: var(--gap);
     }
 
     @include tablet{
@@ -47,7 +71,12 @@
     }
 
     &__item{
+        display: flex;
         position: relative;
+
+        @include for-tablet{
+            width: fit-content;
+        }
 
         &:first-child, &:nth-child(3){
             @include tablet{
@@ -72,6 +101,22 @@
             }
         }
         }
+
+        &:not(:last-child){
+            @include for-tablet{
+                &::after{
+                        position: absolute;
+                        content: '';
+                        height: clamp(50px, 5.143vw, 72px);
+                        width: 1px;
+                        border-right: solid 1px var(--br-b);
+                        top: 50%;
+                        right: calc((var(--gap) / 2) * -1);
+                        transform: translate(50%, -50%);
+                        pointer-events: none;
+                }
+            }
+        }
     }
 
     &__link{
@@ -82,7 +127,11 @@
         font-size: 25px;
         text-align: center;
         color: rgba(var(--cl-c),1.0);
+        
 
+        @include for-tablet{
+            white-space: nowrap;
+        }
         
         &-text{
 

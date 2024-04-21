@@ -6,20 +6,19 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 20;
+  z-index: 100;
   padding: 20px;
   overflow-y: auto;
   background: rgba(7, 9, 12, 0.65);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity 1s, visibility 1s;
   transition-delay: 0.5s;
 
   pointer-events: none;
 
   @include  mobile {
-    padding: 0;
+    padding: 84px 0;
   }
 
   &::-webkit-scrollbar {
@@ -33,12 +32,9 @@
     pointer-events: initial;
 
     &-mode {
-      z-index: 100;
       visibility: visible;
       opacity: 1;
-
       transition: opacity 0.3s, visibility 0.3s;
-
       pointer-events: initial;
     }
   }

@@ -160,6 +160,14 @@ textarea {
   resize: none;
 }
 
+
+.just-validate-error-label{
+  position: absolute;
+  bottom: 0;
+  left: 26px;
+  font-size: 14px;
+  display: none;
+}
 fieldset {
   margin: 0;
   padding: 0;

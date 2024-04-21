@@ -16,6 +16,13 @@
       width: 100%;
     }
 
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 29px;
+        width: 100%;
+    }
+
     &__title{
       margin-bottom: 15px;
       font-size: clamp(20px, 2.1866vw, 30px);
@@ -32,6 +39,18 @@
           }
         }
       }
+
+      &--mode{
+        @include for-tablet{
+          max-width: clamp(318px, 43.4686vw, 589px);
+        }
+
+        @include tablet{
+          @include for-small-tablet{
+            max-width: 70%;
+          }
+        }
+      }
     }
 
     .main-btn{
@@ -45,6 +64,7 @@
       top: 25px;
       right: 26px;
       transition: all .3s;
+      z-index: 25;
 
       svg{
         fill: none;
@@ -125,8 +145,10 @@
           font-size: clamp(18px, 1.8222vw, 25px);
           position: relative;
           padding-left: calc(clamp(40px, 5.0292vw, 69px) + 10px);
-          height: clamp(40px, 5.0292vw, 69px);
-
+          
+          @include for-mobile{
+            height: clamp(40px, 5.0292vw, 69px);
+          }
         
 
           @include for-small-tablet{
@@ -151,7 +173,13 @@
             }
 
             @include desktop{
-              transform: translateY(-30%);
+              @include for-mobile{
+                transform: translateY(-30%);
+              }
+            }
+
+            @include mobile{
+              transform: translateY(-25%);
             }
           }
 
